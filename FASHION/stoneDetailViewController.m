@@ -42,23 +42,24 @@
 }
 
 #pragma mark - tableview delegate
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
     return 2;
 }
-
+*/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     return 3;
 }
-
+/*
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 200; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
 }
-
+*/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -68,7 +69,10 @@
     
     
     detailCell *cell = (detailCell *)[tableView dequeueReusableCellWithIdentifier:@"MyCellIdentifier"];
-    cell.detailLabel.text = @"jklasdjilokfhjsadlghnldfsng jlfdshn glfdjsh lgfd nlfg ";
+    cell.detailLabel.text = @"jklasdjilokf   hjsadl  ghnldfs  asdd sad d asd as das asd  asd asd asd  ng jlfdshn glfdjsh lgfd nlfg ";
+    cell.detailLabel.numberOfLines=0;
+    cell.detailLabel.lineBreakMode=NSLineBreakByWordWrapping;
+    [cell.detailLabel sizeToFit];
     cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
     return cell;
 }
