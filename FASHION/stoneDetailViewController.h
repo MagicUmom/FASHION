@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "YTPlayerView.h"
-
-@interface stoneDetailViewController : UIViewController<YTPlayerViewDelegate>
+#import "detailCell.h"
+@interface stoneDetailViewController : UIViewController<YTPlayerViewDelegate , UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
-@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
-
+@property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 
 
 

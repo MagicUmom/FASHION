@@ -24,6 +24,9 @@
 
     [self.playerView loadWithVideoId:@"M7lc1UVf-VE" playerVars:playerVars];
     self.playerView.delegate = self;
+    [self.detailTableView registerNib:[UINib nibWithNibName:@"detailCell" bundle:nil] forCellReuseIdentifier:@"MyCellIdentifier"];
+    _detailTableView.delegate=self;
+    _detailTableView.dataSource=self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,14 +41,38 @@
     [playerView playVideo];
 }
 
-#pragma mark - textView delegate
-/*
-- (void)loadDefaultSetting
+#pragma mark - tableview delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
-    [self.stoneDetailText setFont:[UIFont boldSystemFontOfSize:18]];
-    [self.stoneDetailText setEditable:NO];
-    [self.stoneDetailText setClipsToBounds:YES];
+    // Return the number of sections.
+    return 2;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return 3;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    //if( cell == nil)
+    // cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"] autorelease];
+    //cell.imageView.image = [UIImage imageNamed:@"icon_chrome.png"];
+    
+    
+    detailCell *cell = (detailCell *)[tableView dequeueReusableCellWithIdentifier:@"MyCellIdentifier"];
+    cell.detailLabel.text = @"jklasdjilokfhjsadlghnldfsng jlfdshn glfdjsh lgfd nlfg ";
+    cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
+    return cell;
+}
+
+
+
 @end
