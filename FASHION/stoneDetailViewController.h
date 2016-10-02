@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YTPlayerView.h"
 
-@interface stoneDetailViewController : UIViewController
+@interface stoneDetailViewController : UIViewController<YTPlayerViewDelegate>
+
+@property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
+
+
 
 @end

@@ -7,16 +7,44 @@
 //
 
 #import "mainMapViewController.h"
+@import GoogleMaps;
 
 @interface mainMapViewController ()
 
 @end
 
-@implementation mainMapViewController
+@implementation mainMapViewController{
+    GMSMapView *mapView_;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:23.6698 longitude:119.6000 zoom:3];
+    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView_.myLocationEnabled = YES;
+    mapView_.indoorEnabled = NO;
+    mapView_.accessibilityElementsHidden = NO;
+
+    // you must need user's gps location
+    mapView_.myLocationEnabled = YES;
+    mapView_.settings.compassButton = YES;
+    mapView_.settings.myLocationButton = YES;
+
+    NSLog(@"User's location: %@", mapView_.myLocation);
+
+    self.view = mapView_;
+    
+    GMSMarker *marker = [[GMSMarker alloc]init];
+    marker.position = CLLocationCoordinate2DMake(23.6700, 119.6021);
+    marker.title = @"xxx";
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
+    marker.snippet = @"Population: 8,174,100";
+    marker.infoWindowAnchor = CGPointMake(0.5, 0.5);
+    //marker.icon = [UIImage imagedName:@"defalut"];
+    marker.map = mapView_;
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   // [self loadDefaultSetting];
+    
+    NSDictionary *playerVars = @{
+                                 @"playsinline" : @1,
+                                 };
+
+    [self.playerView loadWithVideoId:@"M7lc1UVf-VE" playerVars:playerVars];
+    self.playerView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +31,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - YTPlayer delegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)playerViewDidBecomeReady:(nonnull YTPlayerView *)playerView
+{
+    [playerView playVideo];
+}
+
+#pragma mark - textView delegate
+/*
+- (void)loadDefaultSetting
+{
+
+    [self.stoneDetailText setFont:[UIFont boldSystemFontOfSize:18]];
+    [self.stoneDetailText setEditable:NO];
+    [self.stoneDetailText setClipsToBounds:YES];
 }
 */
-
 @end
