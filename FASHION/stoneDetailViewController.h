@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YTPlayerView.h"
 #import "detailCell.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+
 @interface stoneDetailViewController : UIViewController<YTPlayerViewDelegate , UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;

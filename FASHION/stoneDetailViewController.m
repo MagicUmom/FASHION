@@ -59,6 +59,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //return [tableView fd_heightForCellWithIdentifier:@"MyCellIdentifier" configuration:^(id cell){}];
     return 200; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
 }
 

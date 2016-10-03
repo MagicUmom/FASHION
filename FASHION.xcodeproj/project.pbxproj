@@ -25,6 +25,7 @@
 		70415C891DA144150032032B /* detailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70415C881DA144150032032B /* detailCell.xib */; };
 		70415C8C1DA144950032032B /* detailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70415C8B1DA144950032032B /* detailCell.m */; };
 		70415C8E1DA147800032032B /* hello.png in Resources */ = {isa = PBXBuildFile; fileRef = 70415C8D1DA147800032032B /* hello.png */; };
+		70415C911DA25AA20032032B /* StoneSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 70415C901DA25AA20032032B /* StoneSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		70415C8A1DA144950032032B /* detailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailCell.h; sourceTree = "<group>"; };
 		70415C8B1DA144950032032B /* detailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailCell.m; sourceTree = "<group>"; };
 		70415C8D1DA147800032032B /* hello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hello.png; sourceTree = SOURCE_ROOT; };
+		70415C8F1DA25AA20032032B /* StoneSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoneSingleton.h; sourceTree = "<group>"; };
+		70415C901DA25AA20032032B /* StoneSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoneSingleton.m; sourceTree = "<group>"; };
 		A45D141670EC6B2D26CE3425 /* libPods-FASHION.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHION.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C03418829274AAA0FE7190 /* Pods-FASHION.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHION.release.xcconfig"; path = "Pods/Target Support Files/Pods-FASHION/Pods-FASHION.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +136,8 @@
 		7035D0B61D9CB3B4008C1FD1 /* FASHION */ = {
 			isa = PBXGroup;
 			children = (
+				70415C8F1DA25AA20032032B /* StoneSingleton.h */,
+				70415C901DA25AA20032032B /* StoneSingleton.m */,
 				7035D0F31D9CB895008C1FD1 /* myCollectionViewController.h */,
 				7035D0F41D9CB895008C1FD1 /* myCollectionViewController.m */,
 				7035D0F01D9CB886008C1FD1 /* shareViewController.h */,
@@ -392,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70415C8C1DA144950032032B /* detailCell.m in Sources */,
+				70415C911DA25AA20032032B /* StoneSingleton.m in Sources */,
 				7035D0F21D9CB886008C1FD1 /* shareViewController.m in Sources */,
 				7035D0F51D9CB895008C1FD1 /* myCollectionViewController.m in Sources */,
 				7035D0EC1D9CB849008C1FD1 /* mainMapViewController.m in Sources */,

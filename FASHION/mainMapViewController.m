@@ -30,7 +30,8 @@
     mapView_.myLocationEnabled = YES;
     mapView_.settings.compassButton = YES;
     mapView_.settings.myLocationButton = YES;
-
+    mapView_.delegate = self;
+    
     NSLog(@"User's location: %@", mapView_.myLocation);
 
     self.view = mapView_;
@@ -51,6 +52,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - GMSMapViewDelegate
+- (void)mapView:(GMSMapView *)mapView
+didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
+{
+    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+
+}
+
 
 /*
 #pragma mark - Navigation

@@ -21,4 +21,12 @@
     // Configure the view for the selected state
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGFloat totalHeight = 0;
+    totalHeight += [self.detailLabel sizeThatFits:size].height;
+    totalHeight += [self.detailImage sizeThatFits:size].height;
+    totalHeight += 40; // margins
+    return CGSizeMake(size.width, totalHeight);
+}
+
 @end
