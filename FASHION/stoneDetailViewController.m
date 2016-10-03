@@ -25,6 +25,8 @@
     [self.playerView loadWithVideoId:@"M7lc1UVf-VE" playerVars:playerVars];
     self.playerView.delegate = self;
     [self.detailTableView registerNib:[UINib nibWithNibName:@"detailCell" bundle:nil] forCellReuseIdentifier:@"MyCellIdentifier"];
+    [_detailTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    _detailTableView.allowsSelection=NO;
     _detailTableView.delegate=self;
     _detailTableView.dataSource=self;
 }
@@ -54,12 +56,12 @@
     // Return the number of rows in the section.
     return 3;
 }
-/*
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 200; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
 }
-*/
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -74,6 +76,22 @@
     cell.detailLabel.lineBreakMode=NSLineBreakByWordWrapping;
     [cell.detailLabel sizeToFit];
     cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
+    /*
+     switch ((indexPath.row%4)) {
+     case 1:
+     cell.mImageView.image = [UIImage imageNamed:@"icon_chrome.png"];
+     break;
+     case 2:
+     cell.mImageView.image = [UIImage imageNamed:@"icon_firefox.png"];
+     break;
+     case 3:
+     cell.mImageView.image = [UIImage imageNamed:@"icon_safari.png"];
+     break;
+     default:
+     cell.mImageView.image = [UIImage imageNamed:@"icon_ie.png"];
+     break;
+     }
+     */
     return cell;
 }
 
