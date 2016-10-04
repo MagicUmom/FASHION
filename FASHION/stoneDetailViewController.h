@@ -17,6 +17,7 @@
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 - (IBAction)btn_goLastPage:(id)sender;
+- (IBAction)btn_checkIn:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *label_stoneTitle;
 
 

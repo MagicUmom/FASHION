@@ -56,13 +56,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-LX-ceK">
-                                <frame key="frameInset" minX="238" minY="598" width="89" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="打卡"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-LS-2Is">
-                                <frame key="frameInset" minX="51" minY="598" width="89" height="40"/>
+                                <frame key="frameInset" minX="46" minY="607" width="89" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="到此處"/>
                             </button>
@@ -91,6 +86,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-LX-ceK">
+                                <frame key="frameInset" minX="242" minY="607" width="89" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="打卡"/>
+                                <connections>
+                                    <action selector="btn_checkIn:" destination="h1d-34-4hm" eventType="touchUpInside" id="Oqk-nM-Qk6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -98,6 +101,7 @@
                         <outlet property="detailTableView" destination="HQ8-7m-zcu" id="EiZ-pe-wbe"/>
                         <outlet property="label_stoneTitle" destination="ubG-5r-Sp6" id="QCy-8f-Toh"/>
                         <outlet property="playerView" destination="gm7-Xw-beN" id="ZeE-Zc-i0c"/>
+                        <segue destination="j62-Ko-lue" kind="show" identifier="segueCheckIn" id="SdC-Gu-fuf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCG-kZ-RTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
