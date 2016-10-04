@@ -29,6 +29,8 @@
     _detailTableView.allowsSelection=NO;
     _detailTableView.delegate=self;
     _detailTableView.dataSource=self;
+    
+    _label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,6 +98,10 @@
     return cell;
 }
 
+#pragma mark - btn delegate
 
-
+- (IBAction)btn_goLastPage:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:23.6698 longitude:119.6000 zoom:3];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:23.6698 longitude:119.6000 zoom:14];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     mapView_.indoorEnabled = NO;
@@ -30,7 +30,6 @@
     mapView_.myLocationEnabled = YES;
     mapView_.settings.compassButton = YES;
     mapView_.settings.myLocationButton = YES;
-    mapView_.delegate = self;
     
     NSLog(@"User's location: %@", mapView_.myLocation);
 
@@ -41,10 +40,12 @@
     marker.title = @"xxx";
     marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
     marker.snippet = @"Population: 8,174,100";
+    marker.userData = @"101";
     marker.infoWindowAnchor = CGPointMake(0.5, 0.5);
     //marker.icon = [UIImage imagedName:@"defalut"];
     marker.map = mapView_;
     
+    mapView_.delegate = self;
 
 }
 
@@ -60,8 +61,13 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
 }
 
+
 - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
 {
+    
+    NSLog(@"tapped number : %@ marker ",marker.userData);
+    [StoneSingleton shareSingletonObject].stoneKey = marker.userData;
+    [StoneSingleton shareSingletonObject].stoneName = marker.title;
     [self performSegueWithIdentifier:@"showDetail" sender:nil];
 
 }

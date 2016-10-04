@@ -10,11 +10,14 @@
 #import "YTPlayerView.h"
 #import "detailCell.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "StoneSingleton.h"
 
 @interface stoneDetailViewController : UIViewController<YTPlayerViewDelegate , UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
+- (IBAction)btn_goLastPage:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *label_stoneTitle;
 
 
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import "StoneSingleton.h"
 
 @interface mainMapViewController : UIViewController <GMSMapViewDelegate>
 

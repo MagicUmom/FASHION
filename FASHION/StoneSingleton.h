@@ -12,7 +12,7 @@
 
 + (StoneSingleton*)shareSingletonObject;
 @property(strong,nonatomic) NSString *stoneName;
-@property(strong,nonatomic) NSString *stoneID;
+@property(strong,nonatomic) NSString *stoneKey;
 @property(strong,nonatomic) GMSMarker *stoneMarker;
 
 
