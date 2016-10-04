@@ -12,6 +12,8 @@
 
 @end
 
+bool selectedPhoto = 0;
+
 @implementation shareViewController
 
 - (void)viewDidLoad {
@@ -33,5 +35,34 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - btn delegate
 
+- (IBAction)btn_selectPhoto:(id)sender
+{
+    UIImagePickerController *controller = [[UIImagePickerController alloc]init];
+    controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    controller.delegate=self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)btn_IG:(id)sender {
+}
+
+- (IBAction)btn_FB:(id)sender {
+}
+
+- (IBAction)btn_sendCheckIn:(id)sender {
+}
+
+#pragma mark - UIImagePickerControllerDelegate 
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    self.sharePhoto.image=image;
+    self.sharePhoto.contentMode = UIViewContentModeScaleAspectFit;
+    self.sharePhoto.layer.cornerRadius = 8;
+    self.sharePhoto.layer.masksToBounds=YES;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

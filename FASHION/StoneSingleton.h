@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 @import GoogleMaps;
 @interface StoneSingleton : NSObject
-
+{
+    BOOL toHere;
+}
 + (StoneSingleton*)shareSingletonObject;
 @property(strong,nonatomic) NSString *stoneName;
 @property(strong,nonatomic) NSString *stoneKey;
 @property(strong,nonatomic) GMSMarker *stoneMarker;
-
+@property(nonatomic) Boolean toHere;
 
 @end

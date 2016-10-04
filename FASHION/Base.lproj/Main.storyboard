@@ -120,13 +120,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INF-yM-4du">
-                                <frame key="frameInset" minX="147" minY="110" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="選擇照片"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-Bp-9gT">
-                                <frame key="frameInset" minX="16" minY="313" width="343" height="206"/>
+                                <frame key="frameInset" minX="16" minY="389" width="343" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -141,29 +136,42 @@
                                 <frame key="frameInset" minX="43" minY="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="IG"/>
+                                <connections>
+                                    <action selector="btn_IG:" destination="j62-Ko-lue" eventType="touchUpInside" id="hiT-OF-mfu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYq-kD-tuO">
                                 <frame key="frameInset" minX="146" minY="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FB"/>
+                                <connections>
+                                    <action selector="btn_FB:" destination="j62-Ko-lue" eventType="touchUpInside" id="c7b-kb-LDV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh9-2D-Tmw">
                                 <frame key="frameInset" minX="277" minY="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="送出"/>
+                                <connections>
+                                    <action selector="btn_sendCheckIn:" destination="j62-Ko-lue" eventType="touchUpInside" id="OqE-zJ-lGb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOj-bx-JXu">
-                                <frame key="frameInset" minY="58" width="375" height="257"/>
+                                <frame key="frameInset" minY="74" width="375" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INF-yM-4du">
+                                <frame key="frameInset" minX="43" minY="351" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="選擇照片"/>
+                                <connections>
+                                    <action selector="btn_selectPhoto:" destination="j62-Ko-lue" eventType="touchUpInside" id="EFd-n0-eUK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="BTN_FB" destination="eYq-kD-tuO" id="Xzz-bg-SNy"/>
-                        <outlet property="BTN_IG" destination="Wz2-t5-DJA" id="oeT-oS-qNi"/>
-                        <outlet property="BTN_finish" destination="Jh9-2D-Tmw" id="NDc-IY-kUa"/>
-                        <outlet property="BTN_upload" destination="INF-yM-4du" id="H8l-vc-6uc"/>
                         <outlet property="sharePhoto" destination="VOj-bx-JXu" id="VIt-an-ztX"/>
                         <outlet property="shareText" destination="fwQ-Bp-9gT" id="46C-nC-6D4"/>
                     </connections>

@@ -46,7 +46,6 @@
     marker.map = mapView_;
     
     mapView_.delegate = self;
-
 }
 
 - (void)didReceiveMemoryWarning {

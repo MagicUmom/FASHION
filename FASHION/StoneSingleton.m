@@ -10,7 +10,6 @@
 
 @implementation StoneSingleton
 static StoneSingleton *_Stonesingleton = nil;
-
 - (id) init
 {
     self = [super init];
