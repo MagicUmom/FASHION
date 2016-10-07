@@ -27,6 +27,9 @@
 		70415C8C1DA144950032032B /* detailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70415C8B1DA144950032032B /* detailCell.m */; };
 		70415C8E1DA147800032032B /* hello.png in Resources */ = {isa = PBXBuildFile; fileRef = 70415C8D1DA147800032032B /* hello.png */; };
 		70415C911DA25AA20032032B /* StoneSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 70415C901DA25AA20032032B /* StoneSingleton.m */; };
+		70AFDE751DA785490084FCAF /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 70AFDE741DA785490084FCAF /* pictures */; };
+		70AFDE771DA78BC60084FCAF /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70AFDE761DA78BC60084FCAF /* text.txt */; };
+		70AFDE791DA798670084FCAF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AFDE781DA798670084FCAF /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		70415C8D1DA147800032032B /* hello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hello.png; sourceTree = SOURCE_ROOT; };
 		70415C8F1DA25AA20032032B /* StoneSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoneSingleton.h; sourceTree = "<group>"; };
 		70415C901DA25AA20032032B /* StoneSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoneSingleton.m; sourceTree = "<group>"; };
+		70AFDE741DA785490084FCAF /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = SOURCE_ROOT; };
+		70AFDE761DA78BC60084FCAF /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = SOURCE_ROOT; };
+		70AFDE781DA798670084FCAF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A45D141670EC6B2D26CE3425 /* libPods-FASHION.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHION.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C03418829274AAA0FE7190 /* Pods-FASHION.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHION.release.xcconfig"; path = "Pods/Target Support Files/Pods-FASHION/Pods-FASHION.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AFDE791DA798670084FCAF /* libsqlite3.tbd in Frameworks */,
 				281B9D06552888A795346A2B /* libPods-FASHION.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +145,7 @@
 		7035D0B61D9CB3B4008C1FD1 /* FASHION */ = {
 			isa = PBXGroup;
 			children = (
+				70AFDE761DA78BC60084FCAF /* text.txt */,
 				284311A11DA73FCC00E22779 /* 123.txt */,
 				70415C8F1DA25AA20032032B /* StoneSingleton.h */,
 				70415C901DA25AA20032032B /* StoneSingleton.m */,
@@ -165,6 +173,7 @@
 		7035D0B71D9CB3B4008C1FD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				70AFDE741DA785490084FCAF /* pictures */,
 				70415C8D1DA147800032032B /* hello.png */,
 				7035D0B81D9CB3B4008C1FD1 /* main.m */,
 				70415C881DA144150032032B /* detailCell.xib */,
@@ -195,6 +204,7 @@
 		A34803529D62A1BCF6AD03BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70AFDE781DA798670084FCAF /* libsqlite3.tbd */,
 				A45D141670EC6B2D26CE3425 /* libPods-FASHION.a */,
 			);
 			name = Frameworks;
@@ -328,6 +338,8 @@
 				7035D0C21D9CB3B5008C1FD1 /* Main.storyboard in Resources */,
 				70415C8E1DA147800032032B /* hello.png in Resources */,
 				70415C891DA144150032032B /* detailCell.xib in Resources */,
+				70AFDE771DA78BC60084FCAF /* text.txt in Resources */,
+				70AFDE751DA785490084FCAF /* pictures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
