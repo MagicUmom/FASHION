@@ -10,6 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "StoneSingleton.h"
 #import <sqlite3.h>
+#import "FMDatabase.h"
 @interface mainMapViewController : UIViewController <GMSMapViewDelegate>
 
 @end

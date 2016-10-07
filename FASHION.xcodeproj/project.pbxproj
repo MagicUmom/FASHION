@@ -30,6 +30,7 @@
 		70AFDE751DA785490084FCAF /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 70AFDE741DA785490084FCAF /* pictures */; };
 		70AFDE771DA78BC60084FCAF /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70AFDE761DA78BC60084FCAF /* text.txt */; };
 		70AFDE791DA798670084FCAF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AFDE781DA798670084FCAF /* libsqlite3.tbd */; };
+		70AFDE7B1DA7A6E00084FCAF /* stone.db in Resources */ = {isa = PBXBuildFile; fileRef = 70AFDE7A1DA7A6E00084FCAF /* stone.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		70AFDE741DA785490084FCAF /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = SOURCE_ROOT; };
 		70AFDE761DA78BC60084FCAF /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = SOURCE_ROOT; };
 		70AFDE781DA798670084FCAF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		70AFDE7A1DA7A6E00084FCAF /* stone.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = stone.db; sourceTree = SOURCE_ROOT; };
 		A45D141670EC6B2D26CE3425 /* libPods-FASHION.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FASHION.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C03418829274AAA0FE7190 /* Pods-FASHION.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHION.release.xcconfig"; path = "Pods/Target Support Files/Pods-FASHION/Pods-FASHION.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 		7035D0B61D9CB3B4008C1FD1 /* FASHION */ = {
 			isa = PBXGroup;
 			children = (
+				70AFDE7A1DA7A6E00084FCAF /* stone.db */,
 				70AFDE761DA78BC60084FCAF /* text.txt */,
 				284311A11DA73FCC00E22779 /* 123.txt */,
 				70415C8F1DA25AA20032032B /* StoneSingleton.h */,
@@ -334,6 +337,7 @@
 				284311A21DA73FCC00E22779 /* 123.txt in Resources */,
 				7035D0C71D9CB3B5008C1FD1 /* LaunchScreen.storyboard in Resources */,
 				7035D0C41D9CB3B5008C1FD1 /* Assets.xcassets in Resources */,
+				70AFDE7B1DA7A6E00084FCAF /* stone.db in Resources */,
 				7035D0FA1D9CC5FE008C1FD1 /* Podfile in Resources */,
 				7035D0C21D9CB3B5008C1FD1 /* Main.storyboard in Resources */,
 				70415C8E1DA147800032032B /* hello.png in Resources */,

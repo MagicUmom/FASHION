@@ -47,6 +47,20 @@
     
     mapView_.delegate = self;
     
+    //NSURL *appUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
+    //NSString *dbPath = [[appUrl path]stringByAppendingPathComponent:@"db.db"];
+    NSString *dbPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"stone.db"];
+    FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
+    
+    if(![db open])
+    {
+        NSLog(@"Could not open db");
+        db = nil;
+    }
+    else
+    {
+        NSLog(@"db opened");
+    }
 }
 
 - (void)didReceiveMemoryWarning {
