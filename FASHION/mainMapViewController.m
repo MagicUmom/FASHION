@@ -46,10 +46,18 @@
     marker.map = mapView_;
     
     mapView_.delegate = self;
-    
+    /*
     NSURL *appUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
     NSString *dbPath = [[appUrl path]stringByAppendingPathComponent:@"stone.db"];
     //NSString *dbPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"stone.db"];
+    */
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    //sqlite檔案在documents目錄底下的路徑
+    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"stone.db"];
+    NSLog(@"%@",dbPath);
     FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
     
     if(![db open])

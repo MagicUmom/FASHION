@@ -194,6 +194,7 @@
                                 <state key="normal" title="送出" image="go.png"/>
                                 <connections>
                                     <action selector="btn_sendCheckIn:" destination="j62-Ko-lue" eventType="touchUpInside" id="OqE-zJ-lGb"/>
+                                    <segue destination="cEn-sT-VTX" kind="showDetail" id="psZ-bd-Jva"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oin-uX-zV3">
@@ -224,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLm-ID-y08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="928.78560719640188"/>
+            <point key="canvasLocation" x="806" y="913"/>
         </scene>
         <!--My Collection View Controller-->
         <scene sceneID="wG2-dd-kL3">
@@ -242,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Atn-Fr-YGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="929"/>
+            <point key="canvasLocation" x="1870" y="913"/>
         </scene>
     </scenes>
     <resources>
