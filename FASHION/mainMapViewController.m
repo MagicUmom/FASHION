@@ -47,9 +47,9 @@
     
     mapView_.delegate = self;
     
-    //NSURL *appUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
-    //NSString *dbPath = [[appUrl path]stringByAppendingPathComponent:@"db.db"];
-    NSString *dbPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"stone.db"];
+    NSURL *appUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
+    NSString *dbPath = [[appUrl path]stringByAppendingPathComponent:@"stone.db"];
+    //NSString *dbPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"stone.db"];
     FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
     
     if(![db open])
@@ -61,6 +61,23 @@
     {
         NSLog(@"db opened");
     }
+    
+    NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
+    FMResultSet *rs = [db executeQuery:@"SELECT id,name from stone"];
+    
+    while ([rs next]) {
+        int uid = [rs intForColumn:@"id"];
+        NSString *name = [rs stringForColumn:@"name"];
+        
+        [items addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSNumber numberWithInt:uid], @"uid",
+                          name, @"name",
+                          nil]];
+        NSLog(@"%d %@ ",uid,name);
+    }
+    
+    [rs close];   
+
 }
 
 - (void)didReceiveMemoryWarning {
