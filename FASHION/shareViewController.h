@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface shareViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
-
 @property (weak, nonatomic) IBOutlet UIImageView *sharePhoto;
 @property (weak, nonatomic) IBOutlet UITextView *shareText;
 - (IBAction)btn_selectPhoto:(id)sender;
 - (IBAction)btn_IG:(id)sender;
 - (IBAction)btn_FB:(id)sender;
 - (IBAction)btn_sendCheckIn:(id)sender;
+- (IBAction)btn_takePhoto:(id)sender;
+- (IBAction)btn_album:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnO_takePhoto;
+@property (weak, nonatomic) IBOutlet UIButton *btnO_album;
 
 @end

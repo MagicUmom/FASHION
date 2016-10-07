@@ -31,6 +31,8 @@
     _detailTableView.dataSource=self;
     
     _label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
+    _label_stoneTitle.backgroundColor = [UIColor clearColor];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +81,10 @@
     cell.detailLabel.lineBreakMode=NSLineBreakByWordWrapping;
     [cell.detailLabel sizeToFit];
     cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
+    cell.backgroundColor=[UIColor clearColor];
+    cell.backgroundView = [UIView new];
+    cell.selectedBackgroundView = [UIView new];
+
     /*
      switch ((indexPath.row%4)) {
      case 1:

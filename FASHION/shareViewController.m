@@ -54,6 +54,23 @@ bool selectedPhoto = 0;
 - (IBAction)btn_sendCheckIn:(id)sender {
 }
 
+- (IBAction)btn_takePhoto:(id)sender
+{
+    _btnO_album.hidden = YES;
+    _btnO_takePhoto.hidden = YES;
+
+}
+
+- (IBAction)btn_album:(id)sender
+{
+    UIImagePickerController *controller = [[UIImagePickerController alloc]init];
+    controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    controller.delegate=self;
+    [self presentViewController:controller animated:YES completion:nil];
+    _btnO_album.hidden = YES;
+    _btnO_takePhoto.hidden = YES;
+}
+
 #pragma mark - UIImagePickerControllerDelegate 
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
@@ -64,5 +81,6 @@ bool selectedPhoto = 0;
     self.sharePhoto.layer.cornerRadius = 8;
     self.sharePhoto.layer.masksToBounds=YES;
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 @end
