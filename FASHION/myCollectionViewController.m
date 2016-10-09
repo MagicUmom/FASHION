@@ -13,30 +13,38 @@
 
 @end
 
-@implementation myCollectionViewController{
-    GMSMapView *mapView_;
-}
-
+@implementation myCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:23.6698 longitude:119.6000 zoom:14];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    mapView_.indoorEnabled = NO;
-    mapView_.accessibilityElementsHidden = NO;
+    _mapView.myLocationEnabled = YES;
+    _mapView.indoorEnabled = NO;
+    _mapView.accessibilityElementsHidden = NO;
     
     // you must need user's gps location
-    mapView_.myLocationEnabled = YES;
-    mapView_.settings.compassButton = YES;
-    mapView_.settings.myLocationButton = YES;
+    _mapView.myLocationEnabled = YES;
+    _mapView.settings.compassButton = YES;
+    _mapView.settings.myLocationButton = YES;
     
-    NSLog(@"User's location: %@", mapView_.myLocation);
-    self.view = mapView_;
-    mapView_.delegate = self;
+    ///
+    self.camera = [GMSCameraPosition cameraWithLatitude:23.6698
+                                              longitude:119.6000 zoom:14
+                                                bearing:0
+                                           viewingAngle:0
+                   ];
+    
+    self.mapView = [GMSMapView mapWithFrame:_uiView_map.bounds camera:_camera];
+    self.mapView.delegate = self;
+    
+    [self.uiView_map addSubview:_mapView];
+
+    ///
+    NSLog(@"User's location: %@", _mapView.myLocation);
+    //_uiView_map = _mapView;
+    //self->_mapView.delegate = self;
     
     NSMutableArray *jsonArr = [StoneSingleton shareSingletonObject].stoneArray;
     for (NSMutableDictionary *tempArr in jsonArr)
@@ -59,10 +67,11 @@
         }
         tempMarker.userData = [tempArr objectForKey:@"id"];
         tempMarker.infoWindowAnchor = CGPointMake(0.5, 0.5);
-        tempMarker.map = mapView_;
+        tempMarker.map = _mapView;
         
     }
 
+    _collect_label_count.text = [NSString stringWithFormat:@"%lu", (unsigned long)[[StoneSingleton shareSingletonObject].myCollecttion count]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,10 +90,11 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 {
     
     NSLog(@"tapped number : %@ marker ",marker.userData);
+    /*
     [StoneSingleton shareSingletonObject].stoneKey = marker.userData;
     [StoneSingleton shareSingletonObject].stoneName = marker.title;
     [self performSegueWithIdentifier:@"showDetail" sender:nil];
-    
+    */
 }
 
 @end

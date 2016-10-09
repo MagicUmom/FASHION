@@ -11,5 +11,9 @@
 #import "StoneSingleton.h"
 
 @interface myCollectionViewController : UIViewController<GMSMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *collect_label_count;
+@property (strong, nonatomic) IBOutlet UIView *uiView_map;
+@property (nonatomic, strong) IBOutlet GMSMapView *mapView;
+@property (nonatomic, strong) IBOutlet GMSCameraPosition *camera;
 
 @end
