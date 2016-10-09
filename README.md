@@ -15,3 +15,16 @@ to do:
     星星評分 slider bar
     my location
     
+
+to be update:
+    collection :  only 顯示綠色點
+    首頁顯示 blue/green
+    shareview 上一頁
+
+stoneDetail :
+label.text 
+手札體-繁 標準體 24.0
+底框的顏色
+
+shareview
+add label title
