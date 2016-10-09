@@ -20,5 +20,6 @@
 
 @property(strong,nonatomic) NSMutableArray *stoneArray;
 @property(strong,nonatomic) NSMutableDictionary *carArray;
+@property(strong,nonatomic) NSMutableArray *myCollecttion;
 
 @end

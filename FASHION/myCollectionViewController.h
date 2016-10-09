@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
+#import "StoneSingleton.h"
 
-@interface myCollectionViewController : UIViewController
+@interface myCollectionViewController : UIViewController<GMSMapViewDelegate>
 
 @end

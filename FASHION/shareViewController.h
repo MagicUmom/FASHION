@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "StoneSingleton.h"
 @interface shareViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *sharePhoto;
 @property (weak, nonatomic) IBOutlet UITextView *shareText;

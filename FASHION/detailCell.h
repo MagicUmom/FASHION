@@ -11,5 +11,6 @@
 @interface detailCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *detailImage;
 @property (strong, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel_title;
 
 @end

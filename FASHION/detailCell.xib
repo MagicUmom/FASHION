@@ -14,12 +14,15 @@
                 <frame key="frameInset" width="477" height="188"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-VO-WyX">
-                        <frame key="frameInset" width="196" height="105"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy6-Wq-Msq">
-                        <frame key="frameInset" minY="113" width="417" height="68"/>
+                        <frame key="frameInset" minY="76" width="417" height="105"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nur-6K-Zj3">
+                        <frame key="frameInset" minX="8" minY="8" width="160" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -28,8 +31,8 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="detailImage" destination="gNW-VO-WyX" id="Th1-zw-rcY"/>
                 <outlet property="detailLabel" destination="Iy6-Wq-Msq" id="xNd-6q-OCk"/>
+                <outlet property="detailLabel_title" destination="nur-6K-Zj3" id="eib-Xo-MEu"/>
             </connections>
             <point key="canvasLocation" x="-114.5" y="10.5"/>
         </tableViewCell>

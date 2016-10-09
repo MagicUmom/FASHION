@@ -62,13 +62,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 1;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //return [tableView fd_heightForCellWithIdentifier:@"MyCellIdentifier" configuration:^(id cell){}];
-    return 200; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
+    return 400; // 可在 XIB 檔案，點選 My Talbe View Cell 從 Size inspector 得知
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,31 +80,16 @@
     
     
     detailCell *cell = (detailCell *)[tableView dequeueReusableCellWithIdentifier:@"MyCellIdentifier"];
-    cell.detailLabel.text = @"jklasdjilokf   hjsadl  ghnldfs  asdd sad d asd as das asd  asd asd asd  ng jlfdshn glfdjsh lgfd nlfg ";
+    cell.detailLabel.text = @"石滬此通辭里下滬建造較晚，在地理位置比下滬更北（遠），所以命名頂滬。此滬建於昭和十二年，填滬時主要以木板釘成筏船，載運石材到石滬預定地，利用漲潮時將石滬慢慢疊砌，修滬原則是，只要倒塌即修，修復人為全部的持有者。當時的建滬人在1997年訪調時，僅林明仕尚存，其他皆已死亡。據了解，該滬若農曆見一、四、七由謝萬順、陳江河二人巡滬；二、五、八由林明同、林明仕巡滬；三、六、九由李在、李螽斯巡滬。如遇到大月的十、二十、三十這三天，則正月由謝萬順這組巡、二月由林明同這組巡，三月就由李在這組來巡，其餘月份類推。 ";
     cell.detailLabel.numberOfLines=0;
     cell.detailLabel.lineBreakMode=NSLineBreakByWordWrapping;
     [cell.detailLabel sizeToFit];
-    cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
+    //cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
+    cell.detailLabel_title.text = @"故事";
     cell.backgroundColor=[UIColor clearColor];
     cell.backgroundView = [UIView new];
     cell.selectedBackgroundView = [UIView new];
 
-    /*
-     switch ((indexPath.row%4)) {
-     case 1:
-     cell.mImageView.image = [UIImage imageNamed:@"icon_chrome.png"];
-     break;
-     case 2:
-     cell.mImageView.image = [UIImage imageNamed:@"icon_firefox.png"];
-     break;
-     case 3:
-     cell.mImageView.image = [UIImage imageNamed:@"icon_safari.png"];
-     break;
-     default:
-     cell.mImageView.image = [UIImage imageNamed:@"icon_ie.png"];
-     break;
-     }
-     */
     return cell;
 }
 

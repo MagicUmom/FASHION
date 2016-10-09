@@ -52,7 +52,10 @@ bool selectedPhoto = 0;
 - (IBAction)btn_FB:(id)sender {
 }
 
-- (IBAction)btn_sendCheckIn:(id)sender {
+- (IBAction)btn_sendCheckIn:(id)sender
+{
+    NSString *stonekey = [StoneSingleton shareSingletonObject].stoneKey;
+    [[StoneSingleton shareSingletonObject].myCollecttion addObject:stonekey];
 }
 
 - (IBAction)btn_takePhoto:(id)sender

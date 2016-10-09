@@ -13,6 +13,10 @@ static StoneSingleton *_Stonesingleton = nil;
 - (id) init
 {
     self = [super init];
+    if(self)
+    {
+        self.myCollecttion =[[NSMutableArray alloc] init];
+    }
     return self;
 }
 
