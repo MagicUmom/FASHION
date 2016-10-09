@@ -25,6 +25,12 @@
     //NSLog(@"json: %@", json);
     //NSMutableDictionary *temparr = [json objectAtIndex:0];
     //NSLog(@"%@",[temparr objectForKey:@"name"]);
+    /*
+    for (NSMutableDictionary *tempArr in jsonArr)
+    {
+        NSLog(@"%@",[tempArr objectForKey:@"name"]);
+    }
+    */
     [StoneSingleton shareSingletonObject].stoneArray = jsonArr;
 }
 - (void)didReceiveMemoryWarning {

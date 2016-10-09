@@ -46,6 +46,22 @@
     marker.map = mapView_;
     
     mapView_.delegate = self;
+    
+    NSMutableArray *jsonArr = [StoneSingleton shareSingletonObject].stoneArray;
+    for (NSMutableDictionary *tempArr in jsonArr)
+    {
+        GMSMarker *tempMarker = [[GMSMarker alloc]init];
+        double lat = [[tempArr objectForKey:@"latitude"]doubleValue ];
+        double longtitude = [[tempArr objectForKey:@"longitude"] doubleValue];
+        tempMarker.position = CLLocationCoordinate2DMake(lat, longtitude);
+        tempMarker.title = [tempArr objectForKey:@"name"];
+        tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+        tempMarker.userData = [tempArr objectForKey:@"id"];
+        tempMarker.infoWindowAnchor = CGPointMake(0.5, 0.5);
+        tempMarker.map = mapView_;
+
+    }
+
 
 }
 
