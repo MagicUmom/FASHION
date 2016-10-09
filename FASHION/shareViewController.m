@@ -19,7 +19,7 @@ bool selectedPhoto = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    _btn_x.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,12 +38,28 @@ bool selectedPhoto = 0;
 */
 #pragma mark - btn delegate
 
-- (IBAction)btn_selectPhoto:(id)sender
+- (IBAction)btn_star_action:(id)sender
 {
-    UIImagePickerController *controller = [[UIImagePickerController alloc]init];
-    controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    controller.delegate=self;
-    [self presentViewController:controller animated:YES completion:nil];
+    NSUInteger tagNumber = [sender tag];
+    NSUInteger i;
+    tagNumber = tagNumber-200;
+    for (i=1; i<=tagNumber; i++) {
+        UIButton *btn=(UIButton *)[self.view viewWithTag:i+200];
+        [btn setImage:[UIImage imageNamed:@"star_light.png"] forState:UIControlStateNormal];
+    }
+    for(;i<6;i++)
+    {
+        UIButton *btn=(UIButton *)[self.view viewWithTag:i+200];
+        [btn setImage:[UIImage imageNamed:@"star_dark.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)btn_x_action:(id)sender
+{
+    self.sharePhoto.image=nil;
+    _btn_x.hidden = YES;
+    _btnO_album.hidden = NO;
+    _btnO_takePhoto.hidden = NO;
 }
 
 - (IBAction)btn_IG:(id)sender {
@@ -62,6 +78,7 @@ bool selectedPhoto = 0;
 {
     _btnO_album.hidden = YES;
     _btnO_takePhoto.hidden = YES;
+    _btn_x.hidden = NO;
 
 }
 
@@ -71,8 +88,6 @@ bool selectedPhoto = 0;
     controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     controller.delegate=self;
     [self presentViewController:controller animated:YES completion:nil];
-    _btnO_album.hidden = YES;
-    _btnO_takePhoto.hidden = YES;
 }
 
 #pragma mark - UIImagePickerControllerDelegate 
@@ -85,6 +100,10 @@ bool selectedPhoto = 0;
     self.sharePhoto.layer.cornerRadius = 8;
     self.sharePhoto.layer.masksToBounds=YES;
     [self dismissViewControllerAnimated:YES completion:nil];
+    _btnO_album.hidden = YES;
+    _btnO_takePhoto.hidden = YES;
+    _btn_x.hidden = NO;
+
     
 }
 @end

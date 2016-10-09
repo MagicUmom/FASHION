@@ -10,3 +10,8 @@ to do:
     資料庫更新
     textview鍵盤註冊
     youtube 影片 / 照片切換
+    照片選擇->從相機拍照
+    照片選擇->重新選擇照片 x button
+    星星評分 slider bar
+    my location
+    
