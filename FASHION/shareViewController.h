@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *shareText;
 - (IBAction)btn_star_action:(id)sender;
 - (IBAction)btn_x_action:(id)sender;
-- (IBAction)btn_selectPhoto:(id)sender;
 - (IBAction)btn_IG:(id)sender;
 - (IBAction)btn_FB:(id)sender;
 - (IBAction)btn_sendCheckIn:(id)sender;

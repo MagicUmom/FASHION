@@ -15,11 +15,16 @@
 bool selectedPhoto = 0;
 
 @implementation shareViewController
-
+{
+    bool ig_selected;
+    bool fb_selected;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _btn_x.hidden = YES;
+    ig_selected = NO ;
+    fb_selected = NO ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,10 +67,31 @@ bool selectedPhoto = 0;
     _btnO_takePhoto.hidden = NO;
 }
 
-- (IBAction)btn_IG:(id)sender {
+- (IBAction)btn_IG:(id)sender
+{
+    if(ig_selected)
+    {
+        [sender setImage:[UIImage imageNamed:@"ig.png"]forState:UIControlStateNormal];
+    }
+    else
+    {
+        [sender setImage:[UIImage imageNamed:@"ig_clicked.png"]forState:UIControlStateNormal];
+    }
+    ig_selected = !ig_selected;
 }
 
-- (IBAction)btn_FB:(id)sender {
+- (IBAction)btn_FB:(id)sender
+{
+    if(fb_selected)
+    {
+        [sender setImage:[UIImage imageNamed:@"fb.png"]forState:UIControlStateNormal];
+    }
+    else
+    {
+        [sender setImage:[UIImage imageNamed:@"fb_clicked.png"]forState:UIControlStateNormal];
+    }
+    fb_selected = !fb_selected;
+
 }
 
 - (IBAction)btn_sendCheckIn:(id)sender
