@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="init_background" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-32-mwJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="init_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-32-mwJ">
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -49,6 +49,23 @@
                     <view key="view" contentMode="scaleToFill" id="5zM-7l-hQl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-cC-0IJ">
+                                <frame key="frameInset" minY="580" width="375" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-lW-43c">
+                                <frame key="frameInset" minX="9" minY="586" width="108" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-E2-ruO">
+                                <frame key="frameInset" minX="125" minY="592" width="224" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -57,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SuH-YA-9nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="36"/>
+            <point key="canvasLocation" x="805.60000000000002" y="35.532233883058474"/>
         </scene>
         <!--Stone Detail View Controller-->
         <scene sceneID="oMb-dH-kLl">
@@ -159,10 +176,14 @@
                                 <frame key="frameInset" minX="16" minY="404" width="343" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_chat" translatesAutoresizingMaskIntoConstraints="NO" id="ZXu-ol-EgA">
+                                <frame key="frameInset" minX="8" minY="398" width="359" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="我的心情..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-Bp-9gT">
                                 <frame key="frameInset" minX="16" minY="404" width="343" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -219,8 +240,13 @@
                                     <action selector="btn_x_action:" destination="j62-Ko-lue" eventType="touchUpInside" id="WAa-H3-mCr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-Ea-pwZ">
+                                <frame key="frameInset" minX="16" minY="8" width="67" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="home"/>
+                            </button>
                             <button opaque="NO" tag="201" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-Wf-1Mc">
-                                <frame key="frameInset" minX="42" minY="358" width="41" height="38"/>
+                                <frame key="frameInset" minX="67" minY="352" width="41" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="star_201" image="star_light"/>
                                 <connections>
@@ -228,7 +254,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="204" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-BB-ak1">
-                                <frame key="frameInset" minX="189" minY="358" width="41" height="38"/>
+                                <frame key="frameInset" minX="214" minY="352" width="41" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="star_204" image="star_dark"/>
                                 <connections>
@@ -236,7 +262,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="205" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-qA-Dt3">
-                                <frame key="frameInset" minX="242" minY="358" width="41" height="38"/>
+                                <frame key="frameInset" minX="267" minY="352" width="41" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="star_205" image="star_dark"/>
                                 <connections>
@@ -244,7 +270,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="203" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPS-MU-izV">
-                                <frame key="frameInset" minX="140" minY="358" width="41" height="38"/>
+                                <frame key="frameInset" minX="165" minY="352" width="41" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="star_203" image="star_light"/>
                                 <connections>
@@ -252,17 +278,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="202" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFD-fe-yuU">
-                                <frame key="frameInset" minX="91" minY="358" width="41" height="38"/>
+                                <frame key="frameInset" minX="116" minY="352" width="41" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="star_202" image="star_light"/>
                                 <connections>
                                     <action selector="btn_star_action:" destination="j62-Ko-lue" eventType="touchUpInside" id="kaJ-Yd-TRw"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-Ea-pwZ">
-                                <frame key="frameInset" minX="16" minY="8" width="67" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="home"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,7 +372,7 @@
         <image name="go" width="187" height="169"/>
         <image name="home" width="289" height="302"/>
         <image name="ig" width="187" height="169"/>
-        <image name="init_background" width="853" height="1280"/>
+        <image name="init_background.jpg" width="853" height="1280"/>
         <image name="label" width="866" height="207"/>
         <image name="letsgo" width="361" height="322"/>
         <image name="man_icon" width="524" height="554"/>
@@ -362,6 +383,6 @@
         <image name="x_btn" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uNW-iw-RAk"/>
+        <segue reference="6Wz-tJ-5ga"/>
     </inferredMetricsTieBreakers>
 </document>

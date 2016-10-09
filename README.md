@@ -20,6 +20,7 @@ to be update:
     collection :  only 顯示綠色點
     首頁顯示 blue/green
     shareview 上一頁
+    mainMapview - bar 
 
 stoneDetail :
 label.text 
