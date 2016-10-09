@@ -46,45 +46,6 @@
     marker.map = mapView_;
     
     mapView_.delegate = self;
-    /*
-    NSURL *appUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
-    NSString *dbPath = [[appUrl path]stringByAppendingPathComponent:@"stone.db"];
-    //NSString *dbPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"stone.db"];
-    */
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    //sqlite檔案在documents目錄底下的路徑
-    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"stone.db"];
-    NSLog(@"%@",dbPath);
-    FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
-    
-    if(![db open])
-    {
-        NSLog(@"Could not open db");
-        db = nil;
-    }
-    else
-    {
-        NSLog(@"db opened");
-    }
-    
-    NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
-    FMResultSet *rs = [db executeQuery:@"SELECT id,name from stone"];
-    
-    while ([rs next]) {
-        int uid = [rs intForColumn:@"id"];
-        NSString *name = [rs stringForColumn:@"name"];
-        
-        [items addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                          [NSNumber numberWithInt:uid], @"uid",
-                          name, @"name",
-                          nil]];
-        NSLog(@"%d %@ ",uid,name);
-    }
-    
-    [rs close];   
 
 }
 

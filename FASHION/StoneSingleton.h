@@ -18,4 +18,7 @@
 @property(strong,nonatomic) GMSMarker *stoneMarker;
 @property(nonatomic) Boolean toHere;
 
+@property(strong,nonatomic) NSMutableArray *stoneArray;
+@property(strong,nonatomic) NSMutableDictionary *carArray;
+
 @end

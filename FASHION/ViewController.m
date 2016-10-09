@@ -17,10 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    //[[StoneSingleton shareSingletonObject].stoneArray];
+    NSError *error;
+    NSString *url_string = [NSString stringWithFormat: @"http://192.168.2.197/temp/stone.php"];
+    NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
+    NSMutableArray *jsonArr = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    //NSLog(@"json: %@", json);
+    //NSMutableDictionary *temparr = [json objectAtIndex:0];
+    //NSLog(@"%@",[temparr objectForKey:@"name"]);
+    [StoneSingleton shareSingletonObject].stoneArray = jsonArr;
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "StoneSingleton.h"
 @interface ViewController : UIViewController
 
 - (IBAction)btn_entry:(id)sender;
