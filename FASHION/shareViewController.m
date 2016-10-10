@@ -25,6 +25,11 @@ bool selectedPhoto = 0;
     _btn_x.hidden = YES;
     ig_selected = NO ;
     fb_selected = NO ;
+    
+    _label_title.text = [StoneSingleton shareSingletonObject].stoneName;
+    _label_title.backgroundColor = [UIColor clearColor];
+    _label_title.font = [UIFont fontWithName:@"手札體-繁" size:24];
+
 }
 
 - (void)didReceiveMemoryWarning {

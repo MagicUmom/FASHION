@@ -20,6 +20,7 @@
 - (IBAction)btn_checkIn:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *label_stoneTitle;
 
+- (IBAction)bringMeToThere:(id)sender;
 
 
 @end

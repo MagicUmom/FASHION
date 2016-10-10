@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    // [self loadDefaultSetting];
-    
+    [StoneSingleton shareSingletonObject].toHere = NO ;
     NSDictionary *playerVars = @{
                                  @"playsinline" : @1,
                                  };
@@ -36,7 +36,8 @@
     
     _label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
     _label_stoneTitle.backgroundColor = [UIColor clearColor];
-
+    _label_stoneTitle.font = [UIFont fontWithName:@"Bodoni 72 Oldstyle" size:24];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,8 +96,16 @@
 
 #pragma mark - btn delegate
 
+- (IBAction)bringMeToThere:(id)sender
+{
+    [StoneSingleton shareSingletonObject].toHere = YES;
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 - (IBAction)btn_goLastPage:(id)sender
 {
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -205,5 +214,4 @@
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
 }
-
 @end

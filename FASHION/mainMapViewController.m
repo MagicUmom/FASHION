@@ -61,7 +61,34 @@
         tempMarker.map = mapView_;
 
     }
+}
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    NSLog(@"viewWillAppear");
+    
+    if([[StoneSingleton shareSingletonObject] toHere ])
+    {
+        
+        NSLog(@"in this");
+        GMSMutablePath *path = [GMSMutablePath path];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.583175, 119.571419)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.582762, 119.572117)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.580864, 119.576698)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.579704, 119.579434)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.581420, 119.580420)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.583128, 119.580643)];
+        //
+        [path addCoordinate:CLLocationCoordinate2DMake(23.586229, 119.581674)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.589906, 119.582511)];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.591459, 119.582822)];
+        //
+        [path addCoordinate:CLLocationCoordinate2DMake(23.591750, 119.582361)];
+        
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.spans = @[[GMSStyleSpan spanWithColor:[UIColor redColor]]];
+        polyline.map = mapView_;
+    }
 
 }
 
