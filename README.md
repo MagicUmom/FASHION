@@ -31,7 +31,7 @@ label.text
 //add label title
 
 
-my location : 23.581612, 119.572910
+my location : 23.583822, 119.571729
 
 公車 :
 

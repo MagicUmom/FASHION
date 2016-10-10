@@ -13,39 +13,34 @@
 
 @end
 
-@implementation mainMapViewController{
-    GMSMapView *mapView_;
-}
-
+@implementation mainMapViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:23.6698 longitude:119.6000 zoom:14];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    mapView_.indoorEnabled = NO;
-    mapView_.accessibilityElementsHidden = NO;
+    _mapView.myLocationEnabled = YES;
+    _mapView.indoorEnabled = NO;
+    _mapView.accessibilityElementsHidden = NO;
 
     // you must need user's gps location
-    mapView_.myLocationEnabled = YES;
-    mapView_.settings.compassButton = YES;
-    mapView_.settings.myLocationButton = YES;
+    _mapView.myLocationEnabled = YES;
+    _mapView.settings.compassButton = YES;
+    _mapView.settings.myLocationButton = YES;
     
-    NSLog(@"User's location: %@", mapView_.myLocation);
+    self.camera = [GMSCameraPosition cameraWithLatitude:23.583822
+                                              longitude:119.571729 zoom:14
+                                                bearing:0
+                                           viewingAngle:0
+                   ];
+    
+    self.mapView = [GMSMapView mapWithFrame:_uiView_map.bounds camera:_camera];
+    self.mapView.delegate = self;
+    
+    [self.uiView_map addSubview:_mapView];
 
-    self.view = mapView_;
     
-    GMSMarker *marker = [[GMSMarker alloc]init];
-    marker.position = CLLocationCoordinate2DMake(23.6700, 119.6021);
-    marker.title = @"xxx";
-    marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
-    marker.snippet = @"Population: 8,174,100";
-    marker.userData = @"101";
-    marker.infoWindowAnchor = CGPointMake(0.5, 0.5);
-    //marker.icon = [UIImage imagedName:@"defalut"];
-    marker.map = mapView_;
+    NSLog(@"User's location: %@", _mapView.myLocation);
     
-    mapView_.delegate = self;
+    
     
     NSMutableArray *jsonArr = [StoneSingleton shareSingletonObject].stoneArray;
     for (NSMutableDictionary *tempArr in jsonArr)
@@ -58,19 +53,16 @@
         tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
         tempMarker.userData = [tempArr objectForKey:@"id"];
         tempMarker.infoWindowAnchor = CGPointMake(0.5, 0.5);
-        tempMarker.map = mapView_;
+        tempMarker.map = _mapView;
 
     }
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    NSLog(@"viewWillAppear");
     
     if([[StoneSingleton shareSingletonObject] toHere ])
     {
-        
-        NSLog(@"in this");
         GMSMutablePath *path = [GMSMutablePath path];
         [path addCoordinate:CLLocationCoordinate2DMake(23.583175, 119.571419)];
         [path addCoordinate:CLLocationCoordinate2DMake(23.582762, 119.572117)];
@@ -87,7 +79,19 @@
         
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         polyline.spans = @[[GMSStyleSpan spanWithColor:[UIColor redColor]]];
-        polyline.map = mapView_;
+        polyline.map = _mapView;
+        
+        _imageBar_bus.hidden = NO;
+        _imageBar_text.hidden = NO;
+        _imageBar_background.hidden = NO;
+
+        
+    }
+    else
+    {
+        _imageBar_background.hidden = YES;
+        _imageBar_bus.hidden = YES;
+        _imageBar_text.hidden = YES;
     }
 
 }
