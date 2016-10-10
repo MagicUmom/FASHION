@@ -64,6 +64,8 @@
     if([[StoneSingleton shareSingletonObject] toHere ])
     {
         GMSMutablePath *path = [GMSMutablePath path];
+        [path addCoordinate:CLLocationCoordinate2DMake(23.583822, 119.571729)];
+        //
         [path addCoordinate:CLLocationCoordinate2DMake(23.583175, 119.571419)];
         [path addCoordinate:CLLocationCoordinate2DMake(23.582762, 119.572117)];
         [path addCoordinate:CLLocationCoordinate2DMake(23.580864, 119.576698)];

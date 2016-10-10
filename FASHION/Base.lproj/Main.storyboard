@@ -50,16 +50,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-cC-0IJ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5Y-MY-9Ai">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-cC-0IJ">
                                 <frame key="frameInset" minY="580" width="375" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-lW-43c">
-                                <frame key="frameInset" minX="9" minY="586" width="108" height="74"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="JIY-y6-1jh">
+                                <frame key="frameInset" minX="87" minY="594" width="158" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-E2-ruO">
-                                <frame key="frameInset" minX="125" minY="592" width="224" height="67"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-lW-43c">
+                                <frame key="frameInset" minX="11" minY="593" width="79" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="彭西線    15分鐘" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-E2-ruO">
+                                <frame key="frameInset" minX="261" minY="590" width="80" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,6 +78,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imageBar_background" destination="a9o-cC-0IJ" id="tzT-A4-2PW"/>
+                        <outlet property="imageBar_bus" destination="4V7-lW-43c" id="TuU-9I-qfX"/>
+                        <outlet property="imageBar_line" destination="JIY-y6-1jh" id="wvY-AI-vqB"/>
+                        <outlet property="imageBar_text" destination="ly9-E2-ruO" id="JXb-0Z-Dqq"/>
+                        <outlet property="uiView_map" destination="z5Y-MY-9Ai" id="dLM-r6-ui9"/>
                         <segue destination="h1d-34-4hm" kind="show" identifier="showDetail" id="2Ze-71-Xmm"/>
                     </connections>
                 </viewController>
@@ -115,14 +129,13 @@
                                 <frame key="frameInset" minX="79" minY="17" width="287" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubG-5r-Sp6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubG-5r-Sp6">
                                 <frame key="frameInset" minX="152" minY="37" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Label">
+                                    <fragment content="可愛的字體">
                                         <attributes>
                                             <font key="NSFont" size="24" name="HannotateTC-W5"/>
-                                            <font key="NSOriginalFont" size="24" name="HannotateTC-W5"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -133,6 +146,9 @@
                                 <frame key="frameInset" minX="42" minY="578" width="108" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="到此處" image="letsgo"/>
+                                <connections>
+                                    <action selector="bringMeToThere:" destination="h1d-34-4hm" eventType="touchUpInside" id="um4-uQ-zHe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-LX-ceK">
                                 <frame key="frameInset" minX="235" minY="606" width="72" height="58"/>
@@ -285,6 +301,24 @@
                                     <action selector="btn_star_action:" destination="j62-Ko-lue" eventType="touchUpInside" id="kaJ-Yd-TRw"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label" translatesAutoresizingMaskIntoConstraints="NO" id="wfl-OZ-0vb">
+                                <frame key="frameInset" minX="80" minY="8" width="287" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppb-9q-ksw">
+                                <frame key="frameInset" minX="150" minY="31" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HannotateTC-W5"/>
+                                            <font key="NSOriginalFont" size="24" name="HannotateTC-W5"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -292,6 +326,7 @@
                         <outlet property="btnO_album" destination="1XF-en-UTD" id="vuQ-6S-Eyd"/>
                         <outlet property="btnO_takePhoto" destination="Oin-uX-zV3" id="RQf-6e-X26"/>
                         <outlet property="btn_x" destination="JDt-y5-FWI" id="RNi-fR-Arm"/>
+                        <outlet property="label_title" destination="Ppb-9q-ksw" id="30o-Jn-qc7"/>
                         <outlet property="sharePhoto" destination="VOj-bx-JXu" id="VIt-an-ztX"/>
                         <outlet property="shareText" destination="fwQ-Bp-9gT" id="46C-nC-6D4"/>
                     </connections>
@@ -329,8 +364,8 @@
                                 <frame key="frameInset" minX="231" minY="607" width="128" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_collect_icon" translatesAutoresizingMaskIntoConstraints="NO" id="J2P-Rx-E9j">
-                                        <frame key="frameInset" minX="51" minY="2" width="77" height="48"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_chat" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-BB-CXb">
+                                        <frame key="frameInset" minX="-5" minY="-5" width="138" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNi-ha-hch">
@@ -346,8 +381,12 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_collect_icon" translatesAutoresizingMaskIntoConstraints="NO" id="J2P-Rx-E9j">
+                                        <frame key="frameInset" minX="51" minY="2" width="77" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.170423335091133" green="0.68034316698223773" blue="0.91254037618637085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -367,6 +406,7 @@
         <image name="background" width="712" height="1284"/>
         <image name="background.jpg" width="712" height="1284"/>
         <image name="background_chat" width="675" height="433"/>
+        <image name="bus" width="1112" height="1024"/>
         <image name="checkin" width="188" height="188"/>
         <image name="fb" width="187" height="169"/>
         <image name="go" width="187" height="169"/>
@@ -375,6 +415,7 @@
         <image name="init_background.jpg" width="853" height="1280"/>
         <image name="label" width="866" height="207"/>
         <image name="letsgo" width="361" height="322"/>
+        <image name="line" width="214" height="61"/>
         <image name="man_icon" width="524" height="554"/>
         <image name="photo.png" width="400" height="400"/>
         <image name="star_dark" width="36" height="38"/>
