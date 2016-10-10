@@ -34,6 +34,7 @@
     [StoneSingleton shareSingletonObject].stoneArray = jsonArr;
     
     //NSLog(@"%@",[UIFont familyNames]);
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

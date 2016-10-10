@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="271" height="107"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJM-K4-EyC" id="MPu-cb-cwH">
-                <frame key="frameInset" width="271" height="106.5"/>
+                <frame key="frameInset" width="271" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy6-Wq-Msq">
@@ -22,7 +22,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_story" translatesAutoresizingMaskIntoConstraints="NO" id="cxJ-C6-ted">
-                        <frame key="frameInset" minX="85" width="101" height="41"/>
+                        <frame key="frameInset" minX="65" minY="3" width="78" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>

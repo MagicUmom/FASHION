@@ -28,8 +28,8 @@
     _mapView.settings.compassButton = YES;
     _mapView.settings.myLocationButton = YES;
     ///
-    self.camera = [GMSCameraPosition cameraWithLatitude:23.583822
-                                              longitude:119.571729 zoom:14
+    self.camera = [GMSCameraPosition cameraWithLatitude:23.567241
+                                              longitude:119.564565 zoom:14
                                                 bearing:0
                                            viewingAngle:0
                    ];
@@ -69,6 +69,27 @@
         
     }
 
+    
+    // MyLocation
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(23.567241, 119.564565);
+    GMSMarker *myLocat = [GMSMarker markerWithPosition:position];
+    myLocat.title = @"My Location";
+    
+    //原始影像
+    UIImage *image =[UIImage imageNamed:@"man_icon.png"];
+    //製作一個ImageContext並符合新的大小設定
+    UIGraphicsBeginImageContext(CGSizeMake(40, 60));
+    //將原始影像重繪在此範圍中
+    [image drawInRect:CGRectMake(0, 0, 40, 60)];
+    //以目前的ImageContext來製作新的UIImage
+    UIImage *resizeImage =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    myLocat.icon = resizeImage;
+    myLocat.map = _mapView;
+
+    //
+    
     _collect_label_count.text = [NSString stringWithFormat:@"%lu", (unsigned long)[[StoneSingleton shareSingletonObject].myCollecttion count]];
 }
 
