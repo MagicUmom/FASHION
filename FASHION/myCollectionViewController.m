@@ -56,7 +56,7 @@
         //NSLog(@"%@",[StoneSingleton shareSingletonObject].myCollecttion );
         if ([[StoneSingleton shareSingletonObject].myCollecttion containsObject:tempString])
         {
-            tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+            tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor colorWithRed:(238/255.f) green:(120/255.f) blue:(0/255.f) alpha:1.0]];
 
         }
         else

@@ -50,7 +50,7 @@
         double longtitude = [[tempArr objectForKey:@"longitude"] doubleValue];
         tempMarker.position = CLLocationCoordinate2DMake(lat, longtitude);
         tempMarker.title = [tempArr objectForKey:@"name"];
-        tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+        tempMarker.icon = [GMSMarker markerImageWithColor:[UIColor colorWithRed:(76/255.f) green:(108/255.f) blue:(179/255.f) alpha:1.0]];
         tempMarker.userData = [tempArr objectForKey:@"id"];
         tempMarker.infoWindowAnchor = CGPointMake(0.5, 0.5);
         tempMarker.map = _mapView;
