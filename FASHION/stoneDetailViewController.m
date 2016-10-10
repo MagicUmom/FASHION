@@ -36,7 +36,7 @@
     
     _label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
     _label_stoneTitle.backgroundColor = [UIColor clearColor];
-    _label_stoneTitle.font = [UIFont fontWithName:@"myFont" size:24];
+    _label_stoneTitle.font = [UIFont fontWithName:@"wind" size:24];
     _label_stoneTitle.textColor = [UIColor colorWithRed:(188/255.f) green:(188/255.f) blue:(188/255.f) alpha:1.0];
 
 }
