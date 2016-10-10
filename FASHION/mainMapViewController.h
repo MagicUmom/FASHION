@@ -20,5 +20,6 @@
 @property (nonatomic, strong) IBOutlet GMSMapView *mapView;
 @property (nonatomic, strong) IBOutlet GMSCameraPosition *camera;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageBar_line;
 
 @end

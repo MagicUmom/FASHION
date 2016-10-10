@@ -78,20 +78,30 @@
         [path addCoordinate:CLLocationCoordinate2DMake(23.591750, 119.582361)];
         
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-        polyline.spans = @[[GMSStyleSpan spanWithColor:[UIColor redColor]]];
+        //polyline.spans = @[[GMSStyleSpan spanWithColor:[UIColor redColor]]];
+        
+        GMSStrokeStyle *solidRed = [GMSStrokeStyle solidColor:[UIColor redColor]];
+        GMSStrokeStyle *solidBlue = [GMSStrokeStyle solidColor:[UIColor blueColor]];
+        //GMSStrokeStyle *redYellow =[GMSStrokeStyle gradientFromColor:[UIColor redColor] toColor:[UIColor yellowColor]];
+        polyline.spans = @[[GMSStyleSpan spanWithStyle:solidBlue segments:1],
+                           [GMSStyleSpan spanWithStyle:solidRed segments:6],
+                           [GMSStyleSpan spanWithStyle:solidBlue segments:10]];
+
+
+        
         polyline.map = _mapView;
         
         _imageBar_bus.hidden = NO;
         _imageBar_text.hidden = NO;
         _imageBar_background.hidden = NO;
-
-        
+        _imageBar_line.hidden = NO;
     }
     else
     {
         _imageBar_background.hidden = YES;
         _imageBar_bus.hidden = YES;
         _imageBar_text.hidden = YES;
+        _imageBar_line.hidden = YES;
     }
 
 }

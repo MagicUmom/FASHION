@@ -20,7 +20,6 @@
     // Do any additional setup after loading the view.
     
     
-    _mapView.myLocationEnabled = YES;
     _mapView.indoorEnabled = NO;
     _mapView.accessibilityElementsHidden = NO;
     
@@ -28,7 +27,6 @@
     _mapView.myLocationEnabled = YES;
     _mapView.settings.compassButton = YES;
     _mapView.settings.myLocationButton = YES;
-    
     ///
     self.camera = [GMSCameraPosition cameraWithLatitude:23.583822
                                               longitude:119.571729 zoom:14
