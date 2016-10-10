@@ -23,7 +23,7 @@
                                  @"playsinline" : @1,
                                  };
 
-    [self.playerView loadWithVideoId:@"M7lc1UVf-VE" playerVars:playerVars];
+    [self.playerView loadWithVideoId:@"C-5NSGX9fmU" playerVars:playerVars];
     self.playerView.delegate = self;
     [self.detailTableView registerNib:[UINib nibWithNibName:@"detailCell" bundle:nil] forCellReuseIdentifier:@"MyCellIdentifier"];
     [_detailTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -34,7 +34,7 @@
     [tempImageView setFrame:_detailTableView.frame];
     _detailTableView.backgroundView = tempImageView;
     
-    _label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
+    //_label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
     _label_stoneTitle.backgroundColor = [UIColor clearColor];
     _label_stoneTitle.font = [UIFont fontWithName:@"wind" size:24];
     _label_stoneTitle.textColor = [UIColor colorWithRed:(188/255.f) green:(188/255.f) blue:(188/255.f) alpha:1.0];

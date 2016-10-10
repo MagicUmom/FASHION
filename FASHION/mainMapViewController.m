@@ -60,6 +60,23 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(23.583822, 119.571729);
+    GMSMarker *myLocat = [GMSMarker markerWithPosition:position];
+    myLocat.title = @"My Location";
+    
+    //原始影像
+    UIImage *image =[UIImage imageNamed:@"man.png"];
+    //製作一個ImageContext並符合新的大小設定
+    UIGraphicsBeginImageContext(CGSizeMake(40, 60));
+    //將原始影像重繪在此範圍中
+    [image drawInRect:CGRectMake(0, 0, 40, 60)];
+    //以目前的ImageContext來製作新的UIImage
+    UIImage *resizeImage =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    myLocat.icon = resizeImage;
+    myLocat.map = _mapView;
+
     
     if([[StoneSingleton shareSingletonObject] toHere ])
     {

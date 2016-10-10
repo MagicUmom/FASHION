@@ -22,9 +22,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-08-qSV">
-                                <frame key="frameInset" minX="68" minY="219" width="239" height="229"/>
+                                <frame key="frameInset" minX="-100" minY="10" width="459" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="man_icon"/>
+                                <state key="normal" title="Button" image="logo_label"/>
                                 <connections>
                                     <action selector="btn_entry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9T-Bx-b5I"/>
                                     <segue destination="GHe-Le-UAm" kind="showDetail" id="uNW-iw-RAk"/>
@@ -133,7 +133,7 @@
                                 <frame key="frameInset" minX="152" minY="37" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="可愛的字體">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="24" name="HannotateTC-W5"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -158,6 +158,10 @@
                                     <action selector="btn_checkIn:" destination="h1d-34-4hm" eventType="touchUpInside" id="Oqk-nM-Qk6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_title" translatesAutoresizingMaskIntoConstraints="NO" id="v4i-JB-F8T">
+                                <frame key="frameInset" minX="112" minY="28" width="221" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -170,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCG-kZ-RTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1757.5999999999999" y="-13.043478260869566"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="vqH-fB-7au">
@@ -186,6 +190,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-vn-VcM">
                                 <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_title" translatesAutoresizingMaskIntoConstraints="NO" id="WC2-2U-dIl">
+                                <frame key="frameInset" minX="115" minY="18" width="221" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_chat" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Fd-eKk">
@@ -257,7 +265,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-Ea-pwZ">
-                                <frame key="frameInset" minX="16" minY="8" width="67" height="58"/>
+                                <frame key="frameInset" minX="14" minY="15" width="67" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="home"/>
                             </button>
@@ -309,10 +317,9 @@
                                 <frame key="frameInset" minX="150" minY="31" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Label">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="24" name="HannotateTC-W5"/>
-                                            <font key="NSOriginalFont" size="24" name="HannotateTC-W5"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -406,7 +413,7 @@
         <image name="background" width="712" height="1284"/>
         <image name="background.jpg" width="712" height="1284"/>
         <image name="background_chat" width="675" height="433"/>
-        <image name="bus" width="1112" height="1024"/>
+        <image name="bus" width="468" height="408"/>
         <image name="checkin" width="188" height="188"/>
         <image name="fb" width="187" height="169"/>
         <image name="go" width="187" height="169"/>
@@ -414,9 +421,10 @@
         <image name="ig" width="187" height="169"/>
         <image name="init_background.jpg" width="853" height="1280"/>
         <image name="label" width="866" height="207"/>
+        <image name="label_title" width="600" height="200"/>
         <image name="letsgo" width="361" height="322"/>
         <image name="line" width="214" height="61"/>
-        <image name="man_icon" width="524" height="554"/>
+        <image name="logo_label" width="960" height="720"/>
         <image name="photo.png" width="400" height="400"/>
         <image name="star_dark" width="36" height="38"/>
         <image name="star_light" width="36" height="38"/>
@@ -424,6 +432,6 @@
         <image name="x_btn" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Wz-tJ-5ga"/>
+        <segue reference="uNW-iw-RAk"/>
     </inferredMetricsTieBreakers>
 </document>

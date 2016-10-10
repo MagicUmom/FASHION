@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		281B9D06552888A795346A2B /* libPods-FASHION.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45D141670EC6B2D26CE3425 /* libPods-FASHION.a */; };
 		284311A21DA73FCC00E22779 /* 123.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284311A11DA73FCC00E22779 /* 123.txt */; };
-		28B031281DAB8A3400E23502 /* myFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28B031271DAB8A3400E23502 /* myFont.ttf */; };
-		28B0312A1DAB8E6D00E23502 /* wind.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28B031291DAB8E6D00E23502 /* wind.ttf */; };
 		7035D0B91D9CB3B4008C1FD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035D0B81D9CB3B4008C1FD1 /* main.m */; };
 		7035D0BC1D9CB3B4008C1FD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035D0BB1D9CB3B4008C1FD1 /* AppDelegate.m */; };
 		7035D0BF1D9CB3B4008C1FD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035D0BE1D9CB3B4008C1FD1 /* ViewController.m */; };
@@ -54,8 +52,6 @@
 
 /* Begin PBXFileReference section */
 		284311A11DA73FCC00E22779 /* 123.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 123.txt; sourceTree = SOURCE_ROOT; };
-		28B031271DAB8A3400E23502 /* myFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myFont.ttf; sourceTree = SOURCE_ROOT; };
-		28B031291DAB8E6D00E23502 /* wind.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wind.ttf; sourceTree = SOURCE_ROOT; };
 		41C4E07B5FDDD889DE930287 /* Pods-FASHION.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FASHION.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FASHION/Pods-FASHION.debug.xcconfig"; sourceTree = "<group>"; };
 		7035D0B41D9CB3B4008C1FD1 /* FASHION.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FASHION.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7035D0B81D9CB3B4008C1FD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,8 +147,6 @@
 		7035D0B61D9CB3B4008C1FD1 /* FASHION */ = {
 			isa = PBXGroup;
 			children = (
-				28B031291DAB8E6D00E23502 /* wind.ttf */,
-				28B031271DAB8A3400E23502 /* myFont.ttf */,
 				70AFDE7A1DA7A6E00084FCAF /* stone.db */,
 				70AFDE761DA78BC60084FCAF /* text.txt */,
 				284311A11DA73FCC00E22779 /* 123.txt */,
@@ -340,9 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B031281DAB8A3400E23502 /* myFont.ttf in Resources */,
 				284311A21DA73FCC00E22779 /* 123.txt in Resources */,
-				28B0312A1DAB8E6D00E23502 /* wind.ttf in Resources */,
 				7035D0C71D9CB3B5008C1FD1 /* LaunchScreen.storyboard in Resources */,
 				7035D0C41D9CB3B5008C1FD1 /* Assets.xcassets in Resources */,
 				70AFDE7B1DA7A6E00084FCAF /* stone.db in Resources */,
