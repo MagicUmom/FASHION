@@ -13,6 +13,8 @@
 
 @end
 
+bool m_click = NO;
+
 @implementation stoneDetailViewController
 
 - (void)viewDidLoad {
@@ -36,9 +38,11 @@
     
     //_label_stoneTitle.text = [StoneSingleton shareSingletonObject].stoneName;
     _label_stoneTitle.backgroundColor = [UIColor clearColor];
-    _label_stoneTitle.font = [UIFont fontWithName:@"wind" size:24];
+    //_label_stoneTitle.font = [UIFont fontWithName:@"wind" size:24];
     _label_stoneTitle.textColor = [UIColor colorWithRed:(188/255.f) green:(188/255.f) blue:(188/255.f) alpha:1.0];
 
+    _view_w_top.hidden = YES;
+    _view_w_bottom.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,8 +90,7 @@
     cell.detailLabel.numberOfLines=0;
     cell.detailLabel.lineBreakMode=NSLineBreakByWordWrapping;
     [cell.detailLabel sizeToFit];
-    //cell.detailImage.image =[UIImage imageNamed:@"hello.png"];
-    cell.detailLabel_title.text = @"故事";
+    //cell.detailImage.image =[UIImage imageNamed:@"cell_story.png"];
     cell.backgroundColor=[UIColor clearColor];
     cell.backgroundView = [UIView new];
     cell.selectedBackgroundView = [UIView new];
@@ -102,6 +105,38 @@
     [StoneSingleton shareSingletonObject].toHere = YES;
     [self dismissViewControllerAnimated:YES completion:nil];
 
+}
+
+- (IBAction)btn_m:(id)sender
+{
+    if (m_click)
+    {
+        UIImageView *tempView = (UIImageView *)[self.view viewWithTag:401];
+        tempView.image = [UIImage imageNamed:@"w_num_1"];
+        tempView = (UIImageView *)[self.view viewWithTag:402];
+        tempView.image = [UIImage imageNamed:@"w_num_2"];
+        tempView = (UIImageView *)[self.view viewWithTag:403];
+        tempView.image = [UIImage imageNamed:@"w_num_3"];
+        tempView = (UIImageView *)[self.view viewWithTag:404];
+        tempView.image = [UIImage imageNamed:@"w_num_4"];
+        tempView = (UIImageView *)[self.view viewWithTag:411];
+        tempView.image = [UIImage imageNamed:@"w_num_5"];
+        tempView = (UIImageView *)[self.view viewWithTag:412];
+        tempView.image = [UIImage imageNamed:@"w_num_6"];
+        tempView = (UIImageView *)[self.view viewWithTag:413];
+        tempView.image = [UIImage imageNamed:@"w_num_7"];
+        tempView = (UIImageView *)[self.view viewWithTag:414];
+        tempView.image = [UIImage imageNamed:@"w_num_8"];
+        _view_w_top.hidden = NO;
+        _view_w_bottom.hidden =NO;
+    }
+    else
+    {
+        _view_w_bottom.hidden=YES;
+        _view_w_top.hidden=YES;
+    }
+    m_click = !m_click;
+    
 }
 
 - (IBAction)btn_goLastPage:(id)sender

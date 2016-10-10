@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *label_stoneTitle;
 
 - (IBAction)bringMeToThere:(id)sender;
+- (IBAction)btn_m:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIView *view_w_top;
+@property (weak, nonatomic) IBOutlet UIView *view_w_bottom;
 
 @end
