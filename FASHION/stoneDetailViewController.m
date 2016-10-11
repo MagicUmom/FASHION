@@ -147,15 +147,18 @@ bool m_click = NO;
 
 - (IBAction)btn_checkIn:(id)sender
 {
+    /*
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"APP想取得您的FB資訊" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         [self performSegueWithIdentifier:@"segueCheckIn" sender:nil];
     }];
+     
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
-    [self presentViewController:alertController animated:YES completion:nil];
     
+    [self presentViewController:alertController animated:YES completion:nil];
+    */
 }
 
 #pragma mark - view & keyboard

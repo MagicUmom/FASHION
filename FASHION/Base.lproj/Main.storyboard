@@ -328,7 +328,7 @@
                                 <state key="normal" title="送出" image="go"/>
                                 <connections>
                                     <action selector="btn_sendCheckIn:" destination="j62-Ko-lue" eventType="touchUpInside" id="OqE-zJ-lGb"/>
-                                    <segue destination="cEn-sT-VTX" kind="showDetail" id="psZ-bd-Jva"/>
+                                    <segue destination="cEn-sT-VTX" kind="show" id="W8d-ts-Ouu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oin-uX-zV3">
@@ -359,6 +359,9 @@
                                 <frame key="frameInset" minX="14" minY="15" width="67" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="home"/>
+                                <connections>
+                                    <action selector="btn_goBack:" destination="j62-Ko-lue" eventType="touchUpInside" id="qZT-MS-6DJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="201" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-Wf-1Mc">
                                 <frame key="frameInset" minX="67" minY="352" width="41" height="38"/>

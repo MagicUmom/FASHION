@@ -18,6 +18,7 @@
 - (IBAction)btn_sendCheckIn:(id)sender;
 - (IBAction)btn_takePhoto:(id)sender;
 - (IBAction)btn_album:(id)sender;
+- (IBAction)btn_goBack:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *label_title;
 @property (weak, nonatomic) IBOutlet UIButton *btnO_takePhoto;
 @property (weak, nonatomic) IBOutlet UIButton *btnO_album;

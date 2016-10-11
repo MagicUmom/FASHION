@@ -121,6 +121,12 @@ bool selectedPhoto = 0;
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+- (IBAction)btn_goBack:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 #pragma mark - UIImagePickerControllerDelegate 
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
