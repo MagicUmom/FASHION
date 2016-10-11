@@ -90,6 +90,14 @@
                                 <frame key="frameInset" minY="584" width="97" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ2-Ab-gnU">
+                                <frame key="frameInset" minY="573" width="101" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="hot"/>
+                                <connections>
+                                    <action selector="btn_hot:" destination="GHe-Le-UAm" eventType="touchUpInside" id="TEg-Fa-kZh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -98,6 +106,7 @@
                         <outlet property="imageBar_bus" destination="4V7-lW-43c" id="TuU-9I-qfX"/>
                         <outlet property="imageBar_line" destination="JIY-y6-1jh" id="wvY-AI-vqB"/>
                         <outlet property="imageBar_text" destination="ly9-E2-ruO" id="JXb-0Z-Dqq"/>
+                        <outlet property="out_btn_hot" destination="dZ2-Ab-gnU" id="cNh-aM-2bF"/>
                         <outlet property="uiView_map" destination="z5Y-MY-9Ai" id="dLM-r6-ui9"/>
                         <segue destination="h1d-34-4hm" kind="show" identifier="showDetail" id="2Ze-71-Xmm"/>
                     </connections>
@@ -488,6 +497,7 @@
         <image name="fb" width="187" height="169"/>
         <image name="go" width="187" height="169"/>
         <image name="home" width="289" height="302"/>
+        <image name="hot" width="168" height="56"/>
         <image name="ig" width="187" height="169"/>
         <image name="init_background.jpg" width="853" height="1280"/>
         <image name="label" width="866" height="207"/>

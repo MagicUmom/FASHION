@@ -11,15 +11,19 @@
 #import "StoneSingleton.h"
 #import <sqlite3.h>
 #import "FMDatabase.h"
-@interface mainMapViewController : UIViewController <GMSMapViewDelegate>
+#import "SDCycleScrollView.h"
+
+@interface mainMapViewController : UIViewController <GMSMapViewDelegate,SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageBar_background;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBar_bus;
 @property (weak, nonatomic) IBOutlet UILabel *imageBar_text;
+- (IBAction)btn_hot:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *out_btn_hot;
 
 @property (strong, nonatomic) IBOutlet UIView *uiView_map;
 @property (nonatomic, strong) IBOutlet GMSMapView *mapView;
 @property (nonatomic, strong) IBOutlet GMSCameraPosition *camera;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageBar_line;
-
+@property (nonatomic, strong) IBOutlet SDCycleScrollView *cycleScrollView;
 @end

@@ -10,7 +10,9 @@
 @import GoogleMaps;
 
 @interface mainMapViewController ()
-
+{
+    bool btn_hot_clicked;
+}
 @end
 
 @implementation mainMapViewController
@@ -56,6 +58,13 @@
         tempMarker.map = _mapView;
 
     }
+    //
+    NSMutableArray *demoArray = [NSMutableArray arrayWithObjects:@"scroll_demo_01",@"scroll_demo_02",@"scroll_demo_03",@"scroll_demo_04",@"scroll_demo_05",@"scroll_demo_06", nil] ;
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,550,375,117) imageNamesGroup:demoArray];
+    [self.view addSubview:_cycleScrollView];
+    _cycleScrollView.hidden= YES;
+    self.cycleScrollView.delegate = self;
+    btn_hot_clicked = NO;
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -219,6 +228,7 @@
         _imageBar_text.hidden = NO;
         _imageBar_background.hidden = NO;
         _imageBar_line.hidden = NO;
+        _out_btn_hot.hidden = YES;
     }
     else
     {
@@ -226,6 +236,8 @@
         _imageBar_bus.hidden = YES;
         _imageBar_text.hidden = YES;
         _imageBar_line.hidden = YES;
+        _out_btn_hot.hidden = NO;
+
     }
 
 }
@@ -249,19 +261,39 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     NSLog(@"tapped number : %@ marker ",marker.userData);
     [StoneSingleton shareSingletonObject].stoneKey = marker.userData;
     [StoneSingleton shareSingletonObject].stoneName = marker.title;
+    _cycleScrollView.hidden= YES;
     [self performSegueWithIdentifier:@"showDetail" sender:nil];
 
 }
 
+#pragma mark - btn method
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)btn_hot:(id)sender
+{
+    btn_hot_clicked = !btn_hot_clicked;
+    if(btn_hot_clicked) /// move up
+    {
+        UIButton *btn = (UIButton *)sender;
+        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y - 80, btn.frame.size.width, btn.frame.size.height);
+        _cycleScrollView.hidden = NO;
+    }
+    else    ///move down
+    {
+        UIButton *btn = (UIButton *)sender;
+        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y + 80, btn.frame.size.width, btn.frame.size.height);
+        _cycleScrollView.hidden = YES;
+    }
 }
-*/
 
+#pragma mark - SDCycleScrollView method
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"SDCycleScrollView did click %ld",(long)index);
+    GMSCameraPosition *sydney = [GMSCameraPosition cameraWithLatitude:23.575750
+                                                            longitude:119.515444
+                                                                 zoom:16];
+    [_mapView animateToViewingAngle:30];
+    [_mapView setCamera:sydney];
+
+}
 @end
