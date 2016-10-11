@@ -79,7 +79,7 @@
                                 <frame key="frameInset" minX="87" minY="594" width="158" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="彭西線    60分鐘" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-E2-ruO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="西嶼線    60分鐘" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-E2-ruO">
                                 <frame key="frameInset" minX="261" minY="590" width="80" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -90,12 +90,20 @@
                                 <frame key="frameInset" minY="584" width="97" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ2-Ab-gnU">
+                            <button opaque="NO" tag="500" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ2-Ab-gnU">
                                 <frame key="frameInset" minY="573" width="101" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="hot"/>
                                 <connections>
                                     <action selector="btn_hot:" destination="GHe-Le-UAm" eventType="touchUpInside" id="TEg-Fa-kZh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="501" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2G-co-yd4">
+                                <frame key="frameInset" minX="317" minY="599" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icon_my_location"/>
+                                <connections>
+                                    <action selector="btn_action_mylocation:" destination="GHe-Le-UAm" eventType="touchUpInside" id="bmY-B6-IRG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -498,6 +506,7 @@
         <image name="go" width="187" height="169"/>
         <image name="home" width="289" height="302"/>
         <image name="hot" width="168" height="56"/>
+        <image name="icon_my_location" width="512" height="512"/>
         <image name="ig" width="187" height="169"/>
         <image name="init_background.jpg" width="853" height="1280"/>
         <image name="label" width="866" height="207"/>

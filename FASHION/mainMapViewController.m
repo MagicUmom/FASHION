@@ -7,11 +7,17 @@
 //
 
 #import "mainMapViewController.h"
+#define UIView_CycleView_Height 240
+#define UIView_CycleView_Width 375
+#define _CycleView_Height 216
+#define _CycleView_Width 335
+
 @import GoogleMaps;
 
 @interface mainMapViewController ()
 {
     bool btn_hot_clicked;
+    NSMutableArray *demoArray_detail;
 }
 @end
 
@@ -59,11 +65,19 @@
 
     }
     //
-    NSMutableArray *demoArray = [NSMutableArray arrayWithObjects:@"scroll_demo_01",@"scroll_demo_02",@"scroll_demo_03",@"scroll_demo_04",@"scroll_demo_05",@"scroll_demo_06", nil] ;
-    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,550,375,117) imageNamesGroup:demoArray];
-    [self.view addSubview:_cycleScrollView];
-    _cycleScrollView.hidden= YES;
+    
+    //
+    self.view_forSDCycleScroll = [[UIView alloc]initWithFrame:CGRectMake(0,427,UIView_CycleView_Width,UIView_CycleView_Height)];
+    _view_forSDCycleScroll.backgroundColor = [UIColor colorWithRed:(255/255.f) green:(255/255.f) blue:(255/255.f) alpha:1.0];
+    [self.view addSubview:_view_forSDCycleScroll];
+    
+    NSMutableArray *demoArray = [NSMutableArray arrayWithObjects:@"scroll_demo_01",@"scroll_demo_02",@"scroll_demo_03",@"scroll_demo_04",@"scroll_demo_05",@"scroll_demo_06",@"scroll_demo_07", nil] ;
+    
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(20,12,_CycleView_Width,_CycleView_Height) imageNamesGroup:demoArray];
+    [self.view_forSDCycleScroll addSubview:_cycleScrollView];
     self.cycleScrollView.delegate = self;
+    
+    _view_forSDCycleScroll.hidden = YES;
     btn_hot_clicked = NO;
 }
 
@@ -261,12 +275,33 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     NSLog(@"tapped number : %@ marker ",marker.userData);
     [StoneSingleton shareSingletonObject].stoneKey = marker.userData;
     [StoneSingleton shareSingletonObject].stoneName = marker.title;
-    _cycleScrollView.hidden= YES;
+    
+    if(btn_hot_clicked) /// move down
+    {
+        UIButton *btn = [self.view viewWithTag:500];
+        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y + UIView_CycleView_Height -38 , btn.frame.size.width, btn.frame.size.height);
+        _view_forSDCycleScroll.hidden = YES;
+        
+        //btn mylocation
+        UIButton *tmpBtn = [self.view viewWithTag:501];
+        tmpBtn.frame = CGRectMake(tmpBtn.frame.origin.x, tmpBtn.frame.origin.y + UIView_CycleView_Height -15 , tmpBtn.frame.size.width, tmpBtn.frame.size.height);
+        btn_hot_clicked=!btn_hot_clicked;
+    }
+
     [self performSegueWithIdentifier:@"showDetail" sender:nil];
 
 }
 
 #pragma mark - btn method
+- (IBAction)btn_action_mylocation:(id)sender
+{
+    GMSCameraPosition *sydney = [GMSCameraPosition cameraWithLatitude:23.567241
+                                                            longitude:119.564565
+                                                                 zoom:16];
+    [_mapView animateToViewingAngle:30];
+    [_mapView setCamera:sydney];
+
+}
 
 - (IBAction)btn_hot:(id)sender
 {
@@ -274,14 +309,24 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     if(btn_hot_clicked) /// move up
     {
         UIButton *btn = (UIButton *)sender;
-        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y - 80, btn.frame.size.width, btn.frame.size.height);
-        _cycleScrollView.hidden = NO;
+        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y - UIView_CycleView_Height +38 , btn.frame.size.width, btn.frame.size.height);
+        _view_forSDCycleScroll.hidden = NO;
+        
+        //btn mylocation
+        UIButton *tmpBtn = [self.view viewWithTag:501];
+        tmpBtn.frame = CGRectMake(tmpBtn.frame.origin.x, tmpBtn.frame.origin.y - UIView_CycleView_Height +15 , tmpBtn.frame.size.width, tmpBtn.frame.size.height);
+        
     }
     else    ///move down
     {
         UIButton *btn = (UIButton *)sender;
-        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y + 80, btn.frame.size.width, btn.frame.size.height);
-        _cycleScrollView.hidden = YES;
+        btn.frame = CGRectMake(btn.frame.origin.x, btn.frame.origin.y + UIView_CycleView_Height -38 , btn.frame.size.width, btn.frame.size.height);
+        _view_forSDCycleScroll.hidden = YES;
+        
+        //btn mylocation
+        UIButton *tmpBtn = [self.view viewWithTag:501];
+        tmpBtn.frame = CGRectMake(tmpBtn.frame.origin.x, tmpBtn.frame.origin.y + UIView_CycleView_Height -15 , tmpBtn.frame.size.width, tmpBtn.frame.size.height);
+
     }
 }
 
@@ -289,8 +334,77 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"SDCycleScrollView did click %ld",(long)index);
-    GMSCameraPosition *sydney = [GMSCameraPosition cameraWithLatitude:23.575750
-                                                            longitude:119.515444
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    double tmpLatitude = 23.575750;
+    double tmpLongtitude =119.515444;
+    NSString *tmpTitle = @"牛心灣外";
+    NSString *markerID = @"419";
+    switch (index) {
+        case 0:
+            tmpTitle = @"牛心灣外";
+            tmpLatitude = 23.575750;
+            tmpLongtitude = 119.515444;
+            markerID = @"419";
+            break;
+        case 1:
+            tmpTitle = @"棉仔灰";
+            tmpLatitude = 23.579639;
+            tmpLongtitude = 119.681972;
+            markerID = @"75";
+
+            break;
+        case 2:
+            tmpTitle = @"牛心灣外";
+            tmpLatitude = 23.575750;
+            tmpLongtitude = 119.515444;
+            markerID = @"419";
+
+            break;
+        case 3:
+            tmpTitle = @"深滬仔";
+            tmpLatitude = 23.753722;
+            tmpLongtitude = 119.614056;
+            markerID = @"292";
+
+            break;
+        case 4:
+            tmpTitle = @"碼頭";
+            tmpLatitude = 23.582278;
+            tmpLongtitude = 119.515556 ;
+            markerID = @"417";
+
+            break;
+        case 5:
+            tmpTitle = @"西崁瀨滬";
+            tmpLatitude = 23.742417;
+            tmpLongtitude = 119.596000;
+            markerID = @"331";
+
+            break;
+        case 6:
+            tmpTitle = @"大滬";
+            tmpLatitude = 23.562750;
+            tmpLongtitude = 119.491000;
+            markerID = @"430";
+
+            break;
+
+        default:
+            break;
+    }
+    
+    marker.position = CLLocationCoordinate2DMake(tmpLatitude,tmpLongtitude);
+    marker.title = tmpTitle;
+    marker.map = _mapView;
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor colorWithRed:(76/255.f) green:(108/255.f) blue:(179/255.f) alpha:1.0]];
+    marker.infoWindowAnchor = CGPointMake(0.5, 0.5);
+    marker.userData = markerID;
+    //Show info window on map
+    [_mapView setSelectedMarker:marker];
+
+    GMSCameraPosition *sydney = [GMSCameraPosition cameraWithLatitude:tmpLatitude
+                                                            longitude:tmpLongtitude
                                                                  zoom:16];
     [_mapView animateToViewingAngle:30];
     [_mapView setCamera:sydney];

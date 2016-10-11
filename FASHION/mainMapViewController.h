@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *imageBar_text;
 - (IBAction)btn_hot:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *out_btn_hot;
+- (IBAction)btn_action_mylocation:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *uiView_map;
 @property (nonatomic, strong) IBOutlet GMSMapView *mapView;
@@ -26,4 +27,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageBar_line;
 @property (nonatomic, strong) IBOutlet SDCycleScrollView *cycleScrollView;
+@property (nonatomic, strong) IBOutlet UIView *view_forSDCycleScroll;
+
 @end
