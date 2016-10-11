@@ -21,17 +21,8 @@
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-08-qSV">
-                                <frame key="frameInset" minX="-124" minY="-11" width="459" height="344"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="logo_label"/>
-                                <connections>
-                                    <action selector="btn_entry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9T-Bx-b5I"/>
-                                    <segue destination="GHe-Le-UAm" kind="showDetail" id="uNW-iw-RAk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djH-Tz-7Ct">
-                                <frame key="frameInset" minX="184" minY="364" width="191" height="276"/>
+                                <frame key="frameInset" minX="184" minY="362" width="191" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="man_icon"/>
                                 <connections>
@@ -39,11 +30,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0d-cm-P4O">
-                                <frame key="frameInset" minX="30" minY="235" width="345" height="166"/>
+                                <frame key="frameInset" minX="7" minY="223" width="346" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="logo_eng_title"/>
                                 <connections>
                                     <segue destination="GHe-Le-UAm" kind="show" id="eZz-IZ-N1A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-08-qSV">
+                                <frame key="frameInset" minX="-100" minY="-40" width="459" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="logo_label"/>
+                                <connections>
+                                    <action selector="btn_entry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9T-Bx-b5I"/>
+                                    <segue destination="GHe-Le-UAm" kind="showDetail" id="uNW-iw-RAk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -175,24 +175,17 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-LS-2Is">
-                                <frame key="frameInset" minX="42" minY="578" width="108" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="到此處" image="letsgo"/>
-                                <connections>
-                                    <action selector="bringMeToThere:" destination="h1d-34-4hm" eventType="touchUpInside" id="um4-uQ-zHe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-LX-ceK">
-                                <frame key="frameInset" minX="235" minY="606" width="72" height="58"/>
+                                <frame key="frameInset" minX="261" minY="606" width="72" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="打卡" image="checkin"/>
                                 <connections>
                                     <action selector="btn_checkIn:" destination="h1d-34-4hm" eventType="touchUpInside" id="Oqk-nM-Qk6"/>
+                                    <segue destination="j62-Ko-lue" kind="show" id="8Qd-AL-TUM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fax-YA-mnY">
-                                <frame key="frameInset" minX="16" minY="345" width="63" height="253"/>
+                                <frame key="frameInset" minX="16" minY="373" width="63" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="m_main"/>
                                 <connections>
@@ -204,23 +197,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-XA-9db">
-                                <frame key="frameInset" minX="53" minY="345" width="120" height="30"/>
+                                <frame key="frameInset" minY="345" width="101" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" tag="401" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDF-RG-Mdt">
-                                        <frame key="frameInset" width="30" height="30"/>
+                                        <frame key="frameInset" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="402" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-xW-j6d">
-                                        <frame key="frameInset" minX="30" width="30" height="30"/>
+                                        <frame key="frameInset" minX="24" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="403" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-wW-UHe">
-                                        <frame key="frameInset" minX="60" width="30" height="30"/>
+                                        <frame key="frameInset" minX="53" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="404" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azG-si-KNe">
-                                        <frame key="frameInset" minX="90" width="30" height="30"/>
+                                        <frame key="frameInset" minX="77" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -228,29 +221,37 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zos-aD-n1f">
-                                <frame key="frameInset" minX="53" minY="580" width="120" height="30"/>
+                                <frame key="frameInset" minY="632" width="101" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" tag="411" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-pK-h4J">
-                                        <frame key="frameInset" width="30" height="30"/>
+                                        <frame key="frameInset" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="412" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lld-EJ-Pwk">
-                                        <frame key="frameInset" minX="30" width="30" height="30"/>
+                                        <frame key="frameInset" minX="24" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="413" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7I-0a-uFs">
-                                        <frame key="frameInset" minX="60" width="30" height="30"/>
+                                        <frame key="frameInset" minX="53" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="414" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4O-Qb-hZ0">
-                                        <frame key="frameInset" minX="90" width="30" height="30"/>
+                                        <frame key="frameInset" minX="77" width="24" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-LS-2Is">
+                                <frame key="frameInset" minX="120" minY="578" width="108" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="到此處" image="letsgo"/>
+                                <connections>
+                                    <action selector="bringMeToThere:" destination="h1d-34-4hm" eventType="touchUpInside" id="um4-uQ-zHe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -260,7 +261,6 @@
                         <outlet property="playerView" destination="gm7-Xw-beN" id="ZeE-Zc-i0c"/>
                         <outlet property="view_w_bottom" destination="Zos-aD-n1f" id="aRj-Uu-DAa"/>
                         <outlet property="view_w_top" destination="ewd-XA-9db" id="oI7-lE-czz"/>
-                        <segue destination="j62-Ko-lue" kind="show" identifier="segueCheckIn" id="SdC-Gu-fuf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCG-kZ-RTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -527,6 +527,6 @@
         <image name="x_btn" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Wz-tJ-5ga"/>
+        <segue reference="uNW-iw-RAk"/>
     </inferredMetricsTieBreakers>
 </document>

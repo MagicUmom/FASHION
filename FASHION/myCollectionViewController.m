@@ -28,8 +28,8 @@
     _mapView.settings.compassButton = YES;
     _mapView.settings.myLocationButton = YES;
     ///
-    self.camera = [GMSCameraPosition cameraWithLatitude:23.567241
-                                              longitude:119.564565 zoom:14
+    self.camera = [GMSCameraPosition cameraWithLatitude:23.575750
+                                              longitude:119.515444 zoom:16
                                                 bearing:0
                                            viewingAngle:0
                    ];

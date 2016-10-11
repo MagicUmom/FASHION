@@ -109,24 +109,26 @@ bool m_click = NO;
 
 - (IBAction)btn_m:(id)sender
 {
+    m_click = !m_click;
+
     if (m_click)
     {
         UIImageView *tempView = (UIImageView *)[self.view viewWithTag:401];
         tempView.image = [UIImage imageNamed:@"w_num_1"];
         tempView = (UIImageView *)[self.view viewWithTag:402];
-        tempView.image = [UIImage imageNamed:@"w_num_2"];
-        tempView = (UIImageView *)[self.view viewWithTag:403];
-        tempView.image = [UIImage imageNamed:@"w_num_3"];
-        tempView = (UIImageView *)[self.view viewWithTag:404];
-        tempView.image = [UIImage imageNamed:@"w_num_4"];
-        tempView = (UIImageView *)[self.view viewWithTag:411];
         tempView.image = [UIImage imageNamed:@"w_num_5"];
-        tempView = (UIImageView *)[self.view viewWithTag:412];
-        tempView.image = [UIImage imageNamed:@"w_num_6"];
-        tempView = (UIImageView *)[self.view viewWithTag:413];
-        tempView.image = [UIImage imageNamed:@"w_num_7"];
-        tempView = (UIImageView *)[self.view viewWithTag:414];
+        tempView = (UIImageView *)[self.view viewWithTag:403];
+        tempView.image = [UIImage imageNamed:@"w_num_2"];
+        tempView = (UIImageView *)[self.view viewWithTag:404];
         tempView.image = [UIImage imageNamed:@"w_num_8"];
+        tempView = (UIImageView *)[self.view viewWithTag:411];
+        tempView.image = [UIImage imageNamed:@"w_num_0"];
+        tempView = (UIImageView *)[self.view viewWithTag:412];
+        tempView.image = [UIImage imageNamed:@"w_num_9"];
+        tempView = (UIImageView *)[self.view viewWithTag:413];
+        tempView.image = [UIImage imageNamed:@"w_num_3"];
+        tempView = (UIImageView *)[self.view viewWithTag:414];
+        tempView.image = [UIImage imageNamed:@"w_num_2"];
         _view_w_top.hidden = NO;
         _view_w_bottom.hidden =NO;
     }
@@ -135,7 +137,6 @@ bool m_click = NO;
         _view_w_bottom.hidden=YES;
         _view_w_top.hidden=YES;
     }
-    m_click = !m_click;
     
 }
 

@@ -22,7 +22,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_story" translatesAutoresizingMaskIntoConstraints="NO" id="cxJ-C6-ted">
-                        <frame key="frameInset" minX="65" minY="3" width="78" height="31"/>
+                        <frame key="frameInset" minX="96" minY="8" width="78" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
